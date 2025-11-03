@@ -11,9 +11,9 @@
     <header class="bg-white shadow-sm p-4 flex justify-between items-center">
       <!-- Logo -->
       <a class="" href="./index.html">
-        <img class="h-8" src="./Assets/logo.png" alt="logo" />
+        <img class="h-8" src="./Assets/logo1.png" alt="logo" />
       </a>
-      <a href="./index.html" class="text-sm text-indigo-600 hover:underline"
+      <a href="./index.html" class="text-sm text-[#4c183f] hover:underline"
         >← Continue Shopping</a
       >
     </header>
@@ -35,7 +35,7 @@
         <hr class="my-4" />
         <button
           id="payBtn"
-          class="w-full py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition"
+          class="cursor-pointer w-full py-3 rounded-lg bg-[#4c183f] text-white font-semibold hover:bg-[#4c183f] transition"
         >
           Proceed to Payment
         </button>
@@ -123,10 +123,11 @@
       renderCheckout();
 
       payBtn.addEventListener("click", () => {
-        alert("✅ Payment successful! Thank you for shopping with us.");
+        alert("✅ This is a Sample Payment successful!");
         localStorage.removeItem(CART_KEY);
-        window.location.href = "./index.html";
+        window.location.href = "./404.html";
       });
+      
     </script>
   </body>
 </html>

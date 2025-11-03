@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVENT</title>
+    <link rel="stylesheet" href="./output.css" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Cdn Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+      body {
+        font-family: "Josefin Sans", sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* Animations */
+      .fade-in {
+        animation: fadeIn 1s ease forwards;
+        opacity: 0;
+      }
+
+      @keyframes fadeIn {
+        from {
+          transform: scale(0);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1.01);
+          opacity: 1;
+        }
+      }
+
+      input:focus {
+        outline: none;
+      }
+      button:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-start min-h-screen relative ">
+    <!-- Back Home -->
+    <div class="absolute top-5 left-5 z-50">
+      <a
+        href="./index.html"
+        class="flex items-center gap-1.5 transform hover:scale-95 transition duration-300 ease-out"
+      >
+        <p class=""><i class="fa-solid fa-arrow-left"></i> Back to Purchase</p>
+      </a>
+    </div>
+
+    <!-- backimg -->
+    <div class="absolute inset-0 w-full h-full">
+      <img
+        class="w-full h-full object-cover object-left"
+        src="./Assets/signin1.jpg"
+        alt="bg"
+      />
+    </div>
+
+    <section class="w-full overflow-hidden overflow-x-hidden text-black px-3 lg:px-16">
+      <div
+        class="w-full max-w-xl flex flex-col items-center justify-start p-3 lg:p-8"
+      >
+        <form
+          action="./404.html"
+          method="get"
+          class="w-full flex flex-col items-center justify-center dark:bg-black/5 border border-white/10 px-4 py-6 rounded-2xl shadow-xl fade-in backdrop-blur-sm"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <h2
+            class="text-2xl md:text-4xl text-black font-medium text-center"
+          >
+            Reset Password
+          </h2>
+          <p class="text-sm text-black mt-3 text-center">
+            Enter your mail to reset Password
+          </p>
+
+          <div
+            class="flex items-center w-full mt-6 bg-transparent border border-black h-12 rounded-full overflow-hidden pl-6 gap-2 transition"
+          >
+            <input
+              type="email"
+              placeholder="Email id"
+              class="bg-transparent text-black placeholder-black outline-none text-sm w-full h-full"
+              required
+            />
+          </div>
+
+          <div
+            class="flex gap-6 justify-center sm:justify-between items-center mt-8 max-w-xl"
+          >
+            <button
+              type="submit"
+              href="./404.html"
+              class="px-6 py-3 text-sm rounded-full text-white bg-black border border-black hover:opacity-90 transform hover:scale-95 transition duration-300 ease-out cursor-pointer"
+            >
+              Reset
+            </button>
+            <a
+              class="px-4 py-3 text-sm rounded-full text-black border border-black hover:opacity-90 transform hover:scale-95 transition duration-300 ease-out cursor-pointer"
+              href="./Signin.html"
+            >
+              Back to Sign In
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

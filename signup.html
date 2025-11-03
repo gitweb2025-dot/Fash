@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVENT</title>
+    <link rel="stylesheet" href="./output.css" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+        <!-- Font Awesome Cdn Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+      body {
+        font-family: "Josefin Sans", sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* Animations */
+      .fade-in {
+        animation: fadeIn 1s ease forwards;
+        opacity: 0;
+      }
+
+      @keyframes fadeIn {
+        from {
+          transform: scale(0);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1.01);
+          opacity: 1;
+        }
+      }
+
+      input:focus {
+        outline: none;
+      }
+      button:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body
+    class="flex items-center justify-end min-h-screen px-3 md:px-16 relative bg-amber-300"
+  >
+    <!-- Back Home -->
+    <div class="text-black absolute top-5 left-5 z-50">
+      <a
+        href="./index.html"
+        class="flex items-center gap-1.5 transform hover:scale-95 transition duration-300 ease-out"
+      >
+        <p class=""><i class="fa-solid fa-arrow-left"></i>Back to Purchase</p>
+      </a>
+    </div>
+
+    <!-- backimg -->
+    <div class="absolute inset-0 w-full h-full overflow-hidden">
+      <img
+        class="w-full h-full object-cover object-right"
+        src="./Assets/signup3.jpg"
+        alt="bg"
+      />
+    </div>
+
+    <!-- Sign Up Card -->
+    <div
+      class="w-full max-w-md rounded-3xl shadow-2xl fade-in relative z-10 bg-white/5 px-4 py-10 backdrop-blur-sm my-24 text-black"
+    >
+      <h1 class="text-2xl md:text-4xl font-bold text-center mb-2 uppercase">
+        Sign up
+      </h1>
+      <p class="text-center mb-8 text-sm">
+        Create your account to manage your events
+      </p>
+
+      <!-- Form -->
+      <form method="get" action="./404.html" class="space-y-6" id="signupForm">
+        <div>
+          <label class="block text-sm mb-1">Full Name</label>
+          <input
+            type="text"
+            placeholder="John Doe"
+            required
+            class="w-full px-4 py-3 rounded-xl bg-white/5 border border-black/10 transition focus:border-gray-500"
+          />
+        </div>
+        <div>
+          <label class="block text-sm mb-1">Email</label>
+          <input
+            type="email"
+            placeholder="you@example.com"
+            required
+            class="w-full px-4 py-3 rounded-xl bg-white/5 border border-black/10 transition focus:border-gray-500"
+          />
+        </div>
+        <div>
+          <label class="block text-sm mb-1">Password</label>
+          <input
+            type="password"
+            placeholder="••••••••"
+            id="password"
+            required
+            class="w-full px-4 py-3 rounded-xl bg-white/5 border border-black/10 transition focus:border-gray-500"
+          />
+        </div>
+        <div>
+          <label class="block text-sm mb-1">Confirm Password</label>
+          <input
+            type="password"
+            placeholder="••••••••"
+            required
+            class="w-full px-4 py-3 rounded-xl bg-white/5 border border-black/10 transition focus:border-gray-500"
+          />
+        </div>
+
+        <div class="flex justify-between items-center text-sm">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" class="accent-gray-500" required />
+            Accept Terms & Conditions
+          </label>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-3 bg-white/50 font-semibold rounded-xl transform hover:scale-95 transition duration-300 ease-out cursor-pointer shadow-md"
+        >
+          Sign Up
+        </button>
+      </form>
+
+      <!-- Footer -->
+      <p class="text-center text-sm mt-6">
+        Already have an account?
+        <a href="./Signin.html" class="hover:underline text-gray-600"
+          >Sign In</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

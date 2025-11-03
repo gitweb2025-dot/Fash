@@ -170,7 +170,7 @@
     >
       <div class="py-6 px-3 border-b flex items-center justify-between">
         <h3 class="text-lg font-semibold">Your Cart</h3>
-        <button id="closeCart">✕</button>
+        <button class="cursor-pointer" id="closeCart"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div
         id="cartItems"
@@ -184,7 +184,7 @@
         </div>
         <button
           id="checkoutBtn"
-          class="px-6 py-3 rounded-lg bg-[#4c183f] text-white font-semibold"
+          class="px-6 py-3 rounded-lg bg-[#4c183f] text-white font-semibold cursor-pointer"
         >
           Checkout
         </button>
@@ -198,7 +198,7 @@
       <div class="flex items-center justify-between p-3">
         <!-- Logo -->
         <a class="" href="./index.html">
-          <img class="h-8" src="./Assets/logo.png" alt="logo" />
+          <img class="h-8" src="./Assets/logo1.png" alt="logo" />
         </a>
 
         <!-- Desktop Nav -->
@@ -209,7 +209,7 @@
           <div class="relative">
             <!-- Parent Button -->
             <button
-              class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
+              class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
             >
               <a href="./index.html">Home</a>
               <i id="homeToggle" class="fa-solid fa-caret-down"></i>
@@ -231,7 +231,7 @@
 
               <li>
                 <a
-                  href="./Home/Home1.html"
+                  href="./404.html"
                   class="block px-4 py-2 text-black hover:bg-gray-50 hover:text-gray-800 tr"
                 >
                   Home 2
@@ -240,32 +240,32 @@
             </ul>
           </div>
 
-          <!-- About Us -->
+          <!-- Men -->
           <a
-            href="./About/About.html"
-            class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
+            href="./404.html"
+            class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Men
           </a>
 
-          <!-- Services -->
+          <!-- Women -->
           <a
-            href="./Service/Service.html"
-            class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
+            href="./404.html"
+            class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Women
           </a>
           <!-- Contact -->
           <a
-            href="./Contact/Contact.html"
-            class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
+            href="./404.html"
+            class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Contact
           </a>
           <!-- Dashboard -->
           <a
-            href="./Dashboard/Dashboard.html"
-            class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gray-200 after:transition-all after:duration-300 hover:after:w-full"
+            href="./404.html"
+            class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Dashboard
           </a>
@@ -275,30 +275,31 @@
           <div class="relative flex">
             <button
               id="cartToggle"
-              class="relative inline-flex items-center p-3 rounded-lg hover:bg-gray-50"
+              class="relative inline-flex items-center p-3 rounded-lg hover:bg-gray-50 cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                viewBox="0 0 24 24"
                 fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
                 stroke="currentColor"
+                class="size-6"
               >
                 <path
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4"
-                  stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
                 />
               </svg>
+
               <span
                 id="cartCount"
-                class="absolute -top-1 -right-1 bg-[#4c183f] text-white text-xs rounded-full px-1.5"
+                class="absolute top-0 right-0 bg-[#4c183f] text-white text-xs rounded-full px-1.5 py-0.5"
                 >0</span
               >
             </button>
             <a
-              class="flex items-center gap-2 rounded-3xl text-sm transform hover:scale-95 transition duration-200 ease-out"
+              class="md:flex items-center gap-2 rounded-3xl text-sm transform hover:scale-95 transition duration-200 ease-out hidden"
               href="./Signin.html"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -368,18 +369,18 @@
               </li> -->
             </ul>
           </div>
-          <!-- About Us -->
+          <!-- Men -->
           <li>
             <a
-              href="./About/About.html"
+              href="./404.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Men</a
             >
           </li>
-          <!-- Services -->
+          <!-- Women -->
           <li>
             <a
-              href="./Service/Service.html"
+              href="./404.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Women</a
             >
@@ -387,7 +388,7 @@
           <!-- Contact -->
           <li>
             <a
-              href="./Contact/Contact.html"
+              href="./404.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Contact</a
             >
@@ -395,7 +396,7 @@
           <!-- Dashboard -->
           <li>
             <a
-              href="./Dashboard/Dashboard.html"
+              href="./404.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Dashboard</a
             >
@@ -513,30 +514,34 @@
         <div class="flex flex-wrap gap-6 items-center justify-between">
           <h1 class="text-2xl font-bold">Trending in Fashion</h1>
         </div>
-        <div class="mt-6 ml-auto w-full flex flex-wrap gap-6 items-center justify-between">
-          
-          
-            <div class="flex items-center gap-4">
-              <div class="block">
-                <input
-                  id="search"
-                  type="search"
-                  placeholder="Search items, e.g. 'denim jacket'"
-                  class="w-72 px-3 py-2 rounded-lg border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4c183f]"
-                />
-              </div>
+        <div
+          class="mt-6 ml-auto w-full flex flex-wrap gap-6 items-center justify-between"
+        >
+          <div class="flex items-center gap-4">
+            <div class="block">
+              <input
+                id="search"
+                type="search"
+                placeholder="Search items, e.g. 'denim jacket'"
+                class="w-72 px-3 py-2 rounded-lg border border-[#4d183f] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4c183f]"
+              />
             </div>
+          </div>
 
-            <div class="flex items-center gap-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#4c183f]">
-            <h1 class=" font-bold">Sort by</h1>
-            <select id="sort" class="px-2 py-2 rounded border-2 border-gray-200">
+          <div
+            class="flex items-center gap-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#4c183f]"
+          >
+            <h1 class="font-bold">Sort by</h1>
+            <select
+              id="sort"
+              class="px-2 py-2 rounded border-2 border-[#4d183f] cursor-pointer"
+            >
               <option value="featured">Featured</option>
               <option value="price-asc">Price: Low to High</option>
               <option value="price-desc">Price: High to Low</option>
               <option value="rating">Top Rated</option>
             </select>
           </div>
-   
         </div>
       </section>
 
@@ -606,7 +611,7 @@
         class="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-gray-500"
       >
         <div>
-          <img class="h-8" src="./Assets/logo.png" alt="dummyLogoColored" />
+          <img class="h-8" src="./Assets/logo1.png" alt="dummyLogoColored" />
           <p class="mt-6 max-w-2xl">
             If you would like to experience the best of online shopping for men,
             women and kids in India, you are at the right place. Stackly is the
@@ -621,19 +626,16 @@
               Quick Links
             </h3>
             <ul class="text-sm space-y-1">
-              <li><a href="#" class="hover:underline transition">Home</a></li>
+              <li><a href="./404.html" class="hover:underline transition">Home</a></li>
               <li>
-                <a href="#" class="hover:underline transition">Best Sellers</a>
+                <a href="./404.html" class="hover:underline transition">Men</a>
               </li>
               <li>
-                <a href="#" class="hover:underline transition"
-                  >Offers & Deals</a
-                >
+                <a href="./404.html" class="hover:underline transition">Women</a>
               </li>
               <li>
-                <a href="#" class="hover:underline transition">Contact Us</a>
+                <a href="./404.html" class="hover:underline transition">Contact</a>
               </li>
-              <li><a href="#" class="hover:underline transition">FAQs</a></li>
             </ul>
           </div>
           <div>
@@ -642,27 +644,22 @@
             </h3>
             <ul class="text-sm space-y-1">
               <li>
-                <a href="#" class="hover:underline transition"
+                <a href="./404.html" class="hover:underline transition"
                   >Delivery Information</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:underline transition"
+                <a href="./404.html" class="hover:underline transition"
                   >Return & Refund Policy</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:underline transition"
-                  >Payment Methods</a
+                <a href="./404.html" class="hover:underline transition"
+                  >Customer care</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:underline transition"
-                  >Track your Order</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:underline transition">Contact Us</a>
+                <a href="./404.html" class="hover:underline transition">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -672,16 +669,16 @@
             </h3>
             <ul class="text-sm space-y-1">
               <li>
-                <a href="#" class="hover:underline transition">Instagram</a>
+                <a href="./404.html" class="hover:underline transition">Instagram</a>
               </li>
               <li>
-                <a href="#" class="hover:underline transition">Twitter</a>
+                <a href="./404.html" class="hover:underline transition">Twitter</a>
               </li>
               <li>
-                <a href="#" class="hover:underline transition">Facebook</a>
+                <a href="./404.html" class="hover:underline transition">Facebook</a>
               </li>
               <li>
-                <a href="#" class="hover:underline transition">YouTube</a>
+                <a href="./404.html" class="hover:underline transition">YouTube</a>
               </li>
             </ul>
           </div>
@@ -717,7 +714,7 @@
         >
           <button
             data-close
-            class="text-red-700 hover:text-red-900 absolute top-5 right-5 font-bold size-6 rounded-full bg-white/20"
+            class="text-red-700 hover:text-red-900 absolute top-5 right-5 font-bold size-6 rounded-full bg-white/20 cursor-pointer"
           >
             ✕
           </button>
@@ -775,7 +772,7 @@
                 <label class="text-sm">Size</label>
                 <select
                   id="modalSize"
-                  class="px-2 py-1 rounded border border-gray-200"
+                  class="px-2 py-1 rounded border border-[#4d183f]"
                 >
                   <option>XS</option>
                   <option>S</option>
@@ -790,20 +787,20 @@
                   type="number"
                   min="1"
                   value="1"
-                  class="w-20 px-2 py-1 rounded border border-gray-200"
+                  class="w-20 px-2 py-1 rounded border border-[#4d183f]"
                 />
               </div>
 
               <div class="mt-6 flex gap-3">
                 <button
                   id="addToCartBtn"
-                  class="flex-1 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700"
+                  class="flex-1 py-3 rounded-lg bg-[#4c183f] text-white font-semibold cursor-pointer"
                 >
                   Add to cart
                 </button>
                 <!-- <button
                   id="buyNowBtn"
-                  class="py-3 px-4 rounded-lg border border-gray-200"
+                  class="py-3 px-4 rounded-lg border border-[#4d183f]"
                 >
                   Buy now
                 </button> -->
@@ -912,7 +909,7 @@
         },
         {
           id: "p9",
-          title: "Pink Salwaar",
+          title: "Peach Salwaar",
           price: 899,
           oldPrice: 2999,
           rating: 4.5,
@@ -1053,7 +1050,7 @@
             <div class="mt-3 flex gap-2">
               <button data-id="${
                 p.id
-              }" class="viewBtn flex-1 py-2 rounded-lg border border-gray-200 cursor-pointer">View</button>
+              }" class="viewBtn flex-1 py-2 rounded-lg border border-[#4d183f] cursor-pointer">View</button>
               <button data-id="${
                 p.id
               }" class="addBtn bg-[#4c183f] text-white px-3 py-2 rounded-lg cursor-pointer">Add Cart</button>
@@ -1188,11 +1185,11 @@
               <div class="mt-1 flex items-center gap-2 text-sm">
                 <button data-id="${
                   it.id
-                }" class="decBtn px-2 py-1 rounded border">-</button>
+                }" class="decBtn px-2 py-1 rounded border cursor-pointer">-</button>
                 <div class="px-2">${it.qty}</div>
                 <button data-id="${
                   it.id
-                }" class="incBtn px-2 py-1 rounded border">+</button>
+                }" class="incBtn px-2 py-1 rounded border cursor-pointer">+</button>
               </div>
             </div>
             <div class="text-sm font-semibold">₹${
@@ -1200,7 +1197,7 @@
             }</div>
             <button data-id="${
               it.id
-            }" class="ml-2 text-sm text-red-500 removeBtn">Remove</button>
+            }" class="ml-2 text-sm text-red-500 removeBtn cursor-pointer">Remove</button>
           `;
             itemsContainer.appendChild(div);
           });
