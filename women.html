@@ -160,6 +160,23 @@
         outline: 2px solid rgba(99, 102, 241, 0.9);
       }
     </style>
+
+    <style>
+      .marquee-inner {
+        display: flex;
+        width: 200%;
+        animation: marqueeScroll 15s linear infinite;
+      }
+
+      @keyframes marqueeScroll {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
   </head>
 
   <body class="antialiased bg-white text-black">
@@ -169,7 +186,7 @@
       class="fixed right-0 top-0 h-screen w-full sm:w-96 z-50 transform translate-x-full transition-transform duration-700 ease-out bg-white shadow-2xl"
     >
       <div class="py-6 px-3 border-b flex items-center justify-between">
-        <h3 class="text-lg font-semibold">Your Cart</h3>
+        <h3 class="text-lg font-semibold">Women's Cart Page</h3>
         <button class="cursor-pointer" id="closeCart">
           <i class="fa-solid fa-xmark"></i>
         </button>
@@ -252,7 +269,7 @@
 
           <!-- Women -->
           <a
-            href="./mencheckout.html"
+            href="./women.html"
             class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Women
@@ -461,41 +478,22 @@
       </script>
     </header>
 
-    <!-- Announcement Bar -->
-    <div class="p-3 overflow-hidden">
-      <div
-        class="w-full py-2.5 px-3 font-medium text-sm text-white bg-[#4c183f]"
-      >
-        <div
-          class="mx-auto flex flex-col sm:flex-row justify-center items-start sm:items-center gap-4"
-        >
-          <p>
-            <i class="fa-solid fa-truck"></i> Free Shipping on Orders Above $50
-          </p>
-          <span class="hidden sm:inline">|</span>
-          <p><i class="fa-solid fa-gift"></i> 20% OFF on First Purchase</p>
-          <!-- <span class="hidden sm:inline">|</span> -->
-          <!-- <p><i class="fa-solid fa-lock"></i> Use Code: <strong class="uppercase">welcome10</strong></p> -->
-        </div>
-      </div>
-    </div>
-
     <!-- Home -->
-    <main class="relative p-3 overflow-x-hidden text-white">
+    <main class="relative p-3 overflow-x-hidden text-black">
       <div class="absolute p-3 inset-0 z-[-1]">
         <img
-          class="w-full h-[450px] object-cover object-[20%_20%] brightness-50"
-          src="./Assets/home5.jpg"
+          class="w-full h-[450px] object-cover object-center"
+          src="./Assets/home3.jpg"
           alt="bg-image"
         />
       </div>
 
       <div
-        class="h-[450px] w-full flex flex-col items-start justify-end max-w-lg px-3 space-y-4 py-4"
+        class="h-[450px] w-full flex flex-col items-start justify-center max-w-2xl px-3 space-y-4 py-4"
       >
         <p>Casual & Everyday</p>
         <h1 class="text-2xl md:text-5xl font-primary font-bold">
-          Effortlessly blend comfort & style!
+          Explore Elevate your wardrobe, embrace timeless style!
         </h1>
         <p class="text-sm md:text-lg">
           Effortlessly blend comfort and style with our Casual & Everyday
@@ -503,18 +501,266 @@
           and relaxed-fit joggers for your everyday adventures
         </p>
         <a
-          class="px-6 py-3 border border-white/50 transform hover:scale-95 transition duration-300 ease-in-out"
-          href="#productsGrid"
+          class="px-6 py-3 border border-black/50 transform hover:scale-95 transition duration-300 ease-in-out"
+          href="#main"
           >View Collections</a
         >
       </div>
     </main>
 
+    <!-- Slide -->
+    <section class="relative p-3 overflow-x-hidden">
+      <div
+        class="w-full mx-auto flex flex-col items-center justify-center text-center gap-6"
+      >
+        <h1 class="font-primary text-3xl md:text-5xl font-bold">
+          New Collections
+        </h1>
+        <p class="text-sm">
+          Effortlessly blend comfort and style with our Casual & Everyday
+          collection, featuring cozy sweaters, versatile denim, laid-back tees,
+          and relaxed-fit joggers for your everyday adventures
+        </p>
+      </div>
+      <div class="overflow-hidden w-full relative px-3 my-10 mx-auto">
+        <!-- Left gradient fade -->
+        <div
+          class="absolute left-0 top-0 h-full w-10 z-10 pointer-events-none bg-linear-to-r from-white to-transparent"
+        ></div>
+
+        <!-- Marquee content -->
+        <div
+          class="marquee-inner"
+          onmouseenter="this.style.animationPlayState='paused'"
+          onmouseleave="this.style.animationPlayState='running'"
+        >
+          <!-- Card set start -->
+          <div class="flex">
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="../Assets/pro-1.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Unlock Your Creative Flow
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="../Assets/pro-2.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Design Your Digital Future
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="../Assets/pro-3.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Build with Passion, Ship with Pride
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="../Assets/pro-4.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Think Big, Code Smart
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card set end -->
+
+          <!-- Duplicate set for seamless loop -->
+          <div class="flex">
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="./Assets/pro-6.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Unlock Your Creative Flow
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="../Assets/pro-5.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Design Your Digital Future
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="./Assets/pro-7.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Build with Passion, Ship with Pride
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="./Assets/pro-8.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Think Big, Code Smart
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate set for seamless loop -->
+          <div class="flex">
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="./Assets/pro-6.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Unlock Your Creative Flow
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="../Assets/pro-5.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Design Your Digital Future
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="./Assets/pro-7.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Build with Passion, Ship with Pride
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
+            >
+              <img
+                src="./Assets/pro-8.jpg"
+                alt="card"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20"
+              >
+                <p class="text-white text-lg font-semibold text-center">
+                  Think Big, Code Smart
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right gradient fade -->
+        <div
+          class="absolute right-0 top-0 h-full w-10 md:w-20 z-10 pointer-events-none bg-linear-to-l from-white to-transparent"
+        ></div>
+      </div>
+    </section>
+
     <!-- Main -->
-    <main class="mx-auto p-3 overflow-hidden">
+    <main id="main" class="mx-auto p-3 overflow-hidden scroll-mt-20">
       <section class="mb-6">
         <div class="flex flex-wrap gap-6 items-center justify-between">
-          <h1 class="text-2xl font-bold">Trending in Fashion</h1>
+          <h1 class="text-2xl font-bold">Women's Fashion</h1>
         </div>
         <div
           class="mt-6 ml-auto w-full flex flex-wrap gap-6 items-center justify-between"
@@ -524,25 +770,38 @@
               <input
                 id="search"
                 type="search"
-                placeholder="Search items, e.g. 'denim jacket'"
-                class="w-72 px-3 py-2 rounded-lg border border-[#4d183f] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4c183f]"
+                placeholder="Search items, e.g. 'Denim Watch'"
+                class="w-72 px-3 py-2 rounded-lg border border-[#4d183f] shadow-sm focus:outline-none focus:ring focus:ring-[#4c183f]"
               />
             </div>
           </div>
 
-          <div
-            class="flex items-center gap-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#4c183f]"
-          >
-            <h1 class="font-bold">Sort by</h1>
-            <select
-              id="sort"
-              class="px-2 py-2 rounded border-2 border-[#4d183f] cursor-pointer"
+          <div class="flex items-center gap-6 flex-wrap">
+            <!-- categories -->
+            <div>
+              <select id="filterCategory" class="border p-3 rounded-lg">
+                <option value="">All Categories</option>
+                <option value="chudithar">Chudithar</option>
+                <option value="watches">Watches</option>
+                <option value="kurta">Kurthi</option>
+                <option value="bag">Bags</option>
+                <option value="saree">Saree</option>
+                <!-- add more as needed -->
+              </select>
+            </div>
+
+            <!-- sorts based on price -->
+            <div
+              class="flex items-center gap-2 text-gray-800 px-2 py-3 rounded-lg focus:outline-none ring focus:ring-[#4c183f]"
             >
-              <option value="featured">Featured</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-              <option value="rating">Top Rated</option>
-            </select>
+              <h1 class="font-bold text-sm">Sort by -</h1>
+              <select id="sort" class="cursor-pointer focus:outline-none">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+              </select>
+            </div>
           </div>
         </div>
       </section>
@@ -792,11 +1051,13 @@
                   id="modalSize"
                   class="px-2 py-1 rounded border border-[#4d183f]"
                 >
-                  <option>XS</option>
-                  <option>S</option>
-                  <option selected>M</option>
-                  <option>L</option>
-                  <option>XL</option>
+                  <div>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option selected>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </div>
                 </select>
 
                 <label class="ml-4 text-sm">Qty</label>
@@ -837,40 +1098,35 @@
       const products = [
         {
           id: "p1",
-          title: "Ribbed Knit Sweater",
+          title: "Denim Watch — Classic",
           price: 1799,
           oldPrice: 2499,
           rating: 4.7,
           desc: "Soft ribbed knit sweater — cozy fit, great for city styling.",
-          images: ["./Assets/pro-1.jpg"],
+          images: ["./Assets/women-pro-1.jpg"],
+          category: "watches",
         },
         {
           id: "p2",
-          title: "Denim Jacket — Classic",
+          title: "Classic Bag",
           price: 2599,
           oldPrice: 3499,
           rating: 4.5,
           desc: "Timeless denim jacket with reinforced stitching and brushed finish.",
-          images: ["./Assets/pro-2.jpg"],
+          images: ["./Assets/women-pro-5.jpg"],
+          category: "bag",
         },
         {
           id: "p3",
-          title: "Tailored Chinos",
+          title: "Metro Shoe",
           price: 1499,
           oldPrice: 1799,
           rating: 4.4,
           desc: "Slim-fit chinos — breathable, stretch fabric, perfect for smart-casual.",
-          images: ["./Assets/pro-3.jpg"],
+          images: ["./Assets/women-pro-6.jpg"],
+          category: "shoes",
         },
-        {
-          id: "p12",
-          title: "Bomber Jacket",
-          price: 1999,
-          oldPrice: 9999,
-          rating: 4.0,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-2.jpg"],
-        },
+
         {
           id: "p4",
           title: "Everyday Sneakers",
@@ -878,70 +1134,69 @@
           oldPrice: null,
           rating: 4.8,
           desc: "Minimalist sneakers with cushioned insole and traction outsole.",
-          images: ["./Assets/pro-4.jpg"],
+          images: ["./Assets/women-pro-7.jpg"],
+          category: "shoes",
         },
         {
           id: "p5",
-          title: "Floral Midi Dress",
+          title: "Floral Shirt",
           price: 2199,
           oldPrice: 2799,
           rating: 4.6,
           desc: "Flowy midi dress with delicate floral print and side pockets.",
-          images: ["./Assets/pro-5.jpg"],
+          images: ["./Assets/women-pro-8.jpg"],
+          category: "kurta",
         },
-        {
-          id: "p16",
-          title: "Button-Down Shirt",
-          price: 2699,
-          oldPrice: 4999,
-          rating: 4.8,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-6.jpg"],
-        },
+
         {
           id: "p6",
-          title: "Wool Overcoat",
+          title: "Wrist Overcoat",
           price: 6999,
           oldPrice: 8999,
           rating: 4.9,
           desc: "Structured wool overcoat — refined silhouette and warm lining.",
-          images: ["./Assets/pro-6.jpg"],
+          images: ["./Assets/women-pro-2.jpg"],
+          category: "watches",
         },
         {
           id: "p7",
-          title: "Casual Tee Pack (2)",
+          title: "Casual Peach",
           price: 799,
           oldPrice: 1299,
           rating: 4.3,
           desc: "Soft cotton tees — great as basics and layering pieces.",
-          images: ["./Assets/pro-7.jpg"],
+          images: ["./Assets/women-pro-9.jpg"],
+          category: "kurta",
         },
         {
           id: "p8",
-          title: "Leather Crossbody Bag",
+          title: "Steel Crossbody",
           price: 3899,
           oldPrice: 4999,
           rating: 4.5,
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-8.jpg"],
+          images: ["./Assets/women-pro-4.jpg"],
+          category: "watches",
         },
         {
           id: "p9",
-          title: "Peach Salwaar",
+          title: "Brown Shirt",
           price: 899,
           oldPrice: 2999,
           rating: 4.5,
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-9.jpg"],
+          images: ["./Assets/women-pro-11.jpg"],
+          category: "kurta",
         },
         {
           id: "p10",
-          title: "Cotton Saree",
+          title: "Blue Mystery",
           price: 1899,
           oldPrice: 3999,
           rating: 4.3,
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-10.jpg"],
+          images: ["./Assets/women-pro-10.jpg"],
+          category: "kurta",
         },
         {
           id: "p11",
@@ -950,7 +1205,18 @@
           oldPrice: 2999,
           rating: 4.2,
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-1.jpg"],
+          images: ["./Assets/pro-1.jpg"],
+          category: "saree",
+        },
+        {
+          id: "p12",
+          title: "Bomber Jacket",
+          price: 1999,
+          oldPrice: 9999,
+          rating: 4.0,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-2.jpg"],
+          category: "kurta",
         },
 
         {
@@ -960,7 +1226,8 @@
           oldPrice: 7599,
           rating: 4.4,
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-3.jpg"],
+          images: ["./Assets/pro-3.jpg"],
+          category: "saree",
         },
         {
           id: "p14",
@@ -969,7 +1236,8 @@
           oldPrice: 9999,
           rating: 4.9,
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-4.jpg"],
+          images: ["./Assets/pro-4.jpg"],
+          category: "kurta",
         },
         {
           id: "p15",
@@ -978,9 +1246,19 @@
           oldPrice: 7899,
           rating: 4.1,
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-5.jpg"],
+          images: ["./Assets/pro-7.jpg"],
+          category: "kurta",
         },
-
+        {
+          id: "p16",
+          title: "Button-Down Shirt",
+          price: 2699,
+          oldPrice: 4999,
+          rating: 4.8,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-6.jpg"],
+          category: "chudithar",
+        },
         {
           id: "p17",
           title: "Cargo Shorts",
@@ -988,7 +1266,8 @@
           oldPrice: 6799,
           rating: 4.3,
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-7.jpg"],
+          images: ["./Assets/pro-10.jpg"],
+          category: "saree",
         },
         {
           id: "p18",
@@ -997,7 +1276,8 @@
           oldPrice: 1999,
           rating: 4.2,
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-8.jpg"],
+          images: ["./Assets/pro-8.jpg"],
+          category: "kurta",
         },
         {
           id: "p19",
@@ -1006,7 +1286,8 @@
           oldPrice: 6099,
           rating: 4.1,
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-9.jpg"],
+          images: ["./Assets/pro-9.jpg"],
+          category: "kurta",
         },
         {
           id: "p20",
@@ -1015,12 +1296,13 @@
           oldPrice: 9999,
           rating: 4.6,
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-10.avif"],
+          images: ["./Assets/pro-5.jpg"],
+          category: "chudithar",
         },
       ];
 
       /* ---------- Cart state (persisted) ---------- */
-      const CART_KEY = "fs_demo_cart_v1";
+      const CART_KEY = "fs_demo_cart_v3";
       let cart = JSON.parse(localStorage.getItem(CART_KEY) || "{}");
 
       /* ---------- Utilities ---------- */
@@ -1049,7 +1331,7 @@
           <div class="aspect-[4/3] rounded-lg overflow-hidden mb-3 bg-gray-100">
             <img src="${p.images[0]}" alt="${
             p.title
-          }" class="w-full h-full object-cover img-cover object-top" />
+          }" class="w-full h-full object-cover img-cover object-top " />
           </div>
           <div class="flex flex-col gap-2">
             <h3 class="text-sm font-semibold">${p.title}</h3>
@@ -1102,19 +1384,6 @@
         q("#modalOldPrice").textContent = p.oldPrice ? "₹" + p.oldPrice : "";
         q("#modalRating").textContent = p.rating;
         q("#modalQty").value = 1;
-
-        // const thumbs = q("#modalThumbs");
-        // thumbs.innerHTML = "";
-        // p.images.forEach((src) => {
-        //   const t = document.createElement("img");
-        //   t.src = src;
-        //   t.className =
-        //     "w-20 h-20 rounded-lg object-cover cursor-pointer border";
-        //   t.addEventListener("click", () => {
-        //     q("#modalMainImg").src = src;
-        //   });
-        //   thumbs.appendChild(t);
-        // });
 
         // add to cart handler
         const addBtn = q("#addToCartBtn");
@@ -1314,7 +1583,7 @@
         }
         // Save cart to localStorage and go to checkout page
         saveCart();
-        window.location.href = "./checkout.html";
+        window.location.href = "./womencheckout.html";
       });
     </script>
 
@@ -1336,6 +1605,17 @@
     </script>
 
     <script>
+      q("#filterCategory").addEventListener("change", (e) => {
+        const category = e.target.value;
+        let filtered = [...products];
+
+        if (category) {
+          filtered = filtered.filter((p) => p.category === category);
+        }
+
+        renderProducts(filtered);
+      });
+
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
       const links = mobileMenu.querySelectorAll(".nav-link");
@@ -1357,28 +1637,6 @@
         if (!homeToggle.contains(e.target) && !homeMenu.contains(e.target)) {
           homeMenu.classList.add("hidden");
         }
-      });
-
-      /* ---------- Checkout (navigate to checkout page) ---------- */
-      const checkoutBtn = q("#checkoutBtn");
-
-      checkoutBtn.addEventListener("click", () => {
-        if (Object.keys(cart).length === 0) {
-          toast("Cart is empty");
-          return;
-        }
-
-        // Ensure the latest cart data is stored
-        saveCart();
-
-        // Small delay to ensure localStorage write completes before redirect
-        checkoutBtn.disabled = true;
-        checkoutBtn.classList.add("opacity-50", "cursor-not-allowed");
-        toast("Redirecting to checkout...");
-
-        setTimeout(() => {
-          window.location.href = "./checkout.html";
-        }, 300);
       });
     </script>
   </body>
