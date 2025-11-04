@@ -482,29 +482,32 @@
     <main class="relative p-3 overflow-x-hidden text-black">
       <div class="absolute p-3 inset-0 z-[-1]">
         <img
-          class="w-full h-[450px] object-cover object-center"
+          class="w-full h-[500px] object-cover object-center"
           src="./Assets/home3.jpg"
           alt="bg-image"
         />
       </div>
 
       <div
-        class="h-[450px] w-full flex flex-col items-start justify-center max-w-2xl px-3 space-y-4 py-4"
+        class="h-[500px] grid md:grid-cols-2 items-center justify-center px-3 space-y-4 py-4"
       >
-        <p>Casual & Everyday</p>
-        <h1 class="text-2xl md:text-5xl font-primary font-bold">
-          Explore Elevate your wardrobe, embrace timeless style!
-        </h1>
-        <p class="text-sm md:text-lg">
-          Effortlessly blend comfort and style with our Casual & Everyday
-          collection, featuring cozy sweaters, versatile denim, laid-back tees,
-          and relaxed-fit joggers for your everyday adventures
-        </p>
-        <a
-          class="px-6 py-3 border border-black/50 transform hover:scale-95 transition duration-300 ease-in-out"
-          href="#main"
-          >View Collections</a
-        >
+        <div></div>
+        <div class="flex flex-col justify-center px-3 space-y-4 py-4">
+          <p>Casual & Everyday</p>
+          <h1 class="text-2xl md:text-5xl font-primary font-bold">
+            Explore Elevate your wardrobe, embrace timeless style!
+          </h1>
+          <p class="text-sm md:text-lg">
+            Effortlessly blend comfort and style with our Casual & Everyday
+            collection, featuring cozy sweaters, versatile denim, laid-back
+            tees, and relaxed-fit joggers for your everyday adventures
+          </p>
+          <a
+            class="w-fit px-6 py-3 border border-black/50 transform hover:scale-95 transition duration-300 ease-in-out"
+            href="#main"
+            >View Collections</a
+          >
+        </div>
       </div>
     </main>
 
@@ -734,7 +737,7 @@
               class="w-56 mx-4 h-80 relative group hover:scale-90 transition-all duration-300"
             >
               <img
-                src="./Assets/pro-10jpg"
+                src="./Assets/pro-10.jpg"
                 alt="card"
                 class="w-full h-full object-cover"
               />
@@ -888,13 +891,13 @@
             </h3>
             <ul class="text-sm space-y-1">
               <li>
-                <a href="./404.html" class="hover:underline transition">Home</a>
+                <a href="./index.html" class="hover:underline transition">Home</a>
               </li>
               <li>
-                <a href="./404.html" class="hover:underline transition">Men</a>
+                <a href="./men.html" class="hover:underline transition">Men</a>
               </li>
               <li>
-                <a href="./404.html" class="hover:underline transition"
+                <a href="./women.html" class="hover:underline transition"
                   >Women</a
                 >
               </li>
@@ -1097,6 +1100,107 @@
       /* ---------- Sample product data ---------- */
       const products = [
         {
+          id: "p11",
+          title: "Tuxedo",
+          price: 1599,
+          oldPrice: 2999,
+          rating: 4.2,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-1.jpg"],
+          category: "saree",
+        },
+        {
+          id: "p12",
+          title: "Bomber",
+          price: 1999,
+          oldPrice: 9999,
+          rating: 4.0,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-2.jpg"],
+          category: "kurta",
+        },
+
+        {
+          id: "p13",
+          title: "Varsity",
+          price: 2999,
+          oldPrice: 7599,
+          rating: 4.4,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-3.jpg"],
+          category: "saree",
+        },
+        {
+          id: "p14",
+          title: "Lounge Suit",
+          price: 6899,
+          oldPrice: 9999,
+          rating: 4.9,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-4.jpg"],
+          category: "kurta",
+        },
+        {
+          id: "p15",
+          title: "Cotton Suit",
+          price: 999,
+          oldPrice: 7899,
+          rating: 4.1,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-7.jpg"],
+          category: "kurta",
+        },
+        {
+          id: "p16",
+          title: "Button-Down",
+          price: 2699,
+          oldPrice: 4999,
+          rating: 4.8,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-6.jpg"],
+          category: "chudithar",
+        },
+        {
+          id: "p17",
+          title: "Cargo",
+          price: 4899,
+          oldPrice: 6799,
+          rating: 4.3,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-10.jpg"],
+          category: "saree",
+        },
+        {
+          id: "p18",
+          title: "Bermuda",
+          price: 899,
+          oldPrice: 1999,
+          rating: 4.2,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-8.jpg"],
+          category: "kurta",
+        },
+        {
+          id: "p19",
+          title: "Polo fit",
+          price: 1799,
+          oldPrice: 6099,
+          rating: 4.1,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-9.jpg"],
+          category: "kurta",
+        },
+        {
+          id: "p20",
+          title: "Crossbody",
+          price: 2899,
+          oldPrice: 9999,
+          rating: 4.6,
+          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
+          images: ["./Assets/pro-5.jpg"],
+          category: "chudithar",
+        },
+        {
           id: "p1",
           title: "Denim Watch — Classic",
           price: 1799,
@@ -1139,7 +1243,7 @@
         },
         {
           id: "p5",
-          title: "Floral Shirt",
+          title: "Floral",
           price: 2199,
           oldPrice: 2799,
           rating: 4.6,
@@ -1180,7 +1284,7 @@
         },
         {
           id: "p9",
-          title: "Brown Shirt",
+          title: "Brown",
           price: 899,
           oldPrice: 2999,
           rating: 4.5,
@@ -1197,107 +1301,6 @@
           desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
           images: ["./Assets/women-pro-10.jpg"],
           category: "kurta",
-        },
-        {
-          id: "p11",
-          title: "Tuxedo",
-          price: 1599,
-          oldPrice: 2999,
-          rating: 4.2,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-1.jpg"],
-          category: "saree",
-        },
-        {
-          id: "p12",
-          title: "Bomber Jacket",
-          price: 1999,
-          oldPrice: 9999,
-          rating: 4.0,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-2.jpg"],
-          category: "kurta",
-        },
-
-        {
-          id: "p13",
-          title: "Varsity Jacket",
-          price: 2999,
-          oldPrice: 7599,
-          rating: 4.4,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-3.jpg"],
-          category: "saree",
-        },
-        {
-          id: "p14",
-          title: "Lounge Suit",
-          price: 6899,
-          oldPrice: 9999,
-          rating: 4.9,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-4.jpg"],
-          category: "kurta",
-        },
-        {
-          id: "p15",
-          title: "Cotton Suit",
-          price: 999,
-          oldPrice: 7899,
-          rating: 4.1,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-7.jpg"],
-          category: "kurta",
-        },
-        {
-          id: "p16",
-          title: "Button-Down Shirt",
-          price: 2699,
-          oldPrice: 4999,
-          rating: 4.8,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-6.jpg"],
-          category: "chudithar",
-        },
-        {
-          id: "p17",
-          title: "Cargo Shorts",
-          price: 4899,
-          oldPrice: 6799,
-          rating: 4.3,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-10.jpg"],
-          category: "saree",
-        },
-        {
-          id: "p18",
-          title: "Bermuda Shorts",
-          price: 899,
-          oldPrice: 1999,
-          rating: 4.2,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-8.jpg"],
-          category: "kurta",
-        },
-        {
-          id: "p19",
-          title: "Polo shirt",
-          price: 1799,
-          oldPrice: 6099,
-          rating: 4.1,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-9.jpg"],
-          category: "kurta",
-        },
-        {
-          id: "p20",
-          title: "Crossbody Shirt",
-          price: 2899,
-          oldPrice: 9999,
-          rating: 4.6,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-5.jpg"],
-          category: "chudithar",
         },
       ];
 
