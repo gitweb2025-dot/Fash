@@ -130,3 +130,262 @@
         });
       </script>
     </section>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinite Scroll Promo Banner</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  .scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .scroll-content {
+    display: inline-block;
+    animation: scroll-left 18s linear infinite;
+  }
+
+  /* Pause on hover */
+  .scroll-container:hover .scroll-content {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+</head>
+
+<body class="bg-gray-100 flex justify-center py-10">
+
+
+
+</body>
+</html>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Top Navbar -->
+  <header class="w-full bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <h1 class="text-2xl font-bold">Store Dashboard</h1>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuToggle" class="lg:hidden block p-2 bg-gray-100 rounded-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+
+      <div id="navbarMenu" class="flex-col gap-4 lg:flex lg:flex-row lg:items-center hidden">
+        <input type="text" placeholder="Search products..." class="border rounded-xl px-4 py-2 w-full sm:w-64 outline-none focus:ring focus:ring-indigo-300" />
+        <button class="relative p-2 bg-gray-100 rounded-full">
+          <span class="material-icons">notifications</span>
+        </button>
+        <img src="https://i.pravatar.cc/40" class="w-10 h-10 rounded-full object-cover" />
+      </div>
+    </div>
+  </header>
+
+  <script>
+    const menuBtn = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navbarMenu');
+
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+      navMenu.classList.toggle('flex');
+    });
+  </script>
+
+  <!-- Content -->
+  <main class="max-w-7xl mx-auto px-4 py-6 space-y-6">
+    <!-- Stats -->
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="text-sm text-gray-500">Total Sales</h3>
+        <p class="text-2xl font-bold mt-1">$12,540</p>
+      </div>
+      <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="text-sm text-gray-500">Orders</h3>
+        <p class="text-2xl font-bold mt-1">420</p>
+      </div>
+      <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="text-sm text-gray-500">Visitors</h3>
+        <p class="text-2xl font-bold mt-1">8,120</p>
+      </div>
+      <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="text-sm text-gray-500">Stock Items</h3>
+        <p class="text-2xl font-bold mt-1">312</p>
+      </div>
+    </section>
+
+    <!-- Tables & Cards -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Recent Orders -->
+      <div class="lg:col-span-2 bg-white rounded-2xl shadow p-4">
+        <h2 class="text-lg font-bold mb-4">Recent Orders</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead>
+              <tr class="border-b bg-gray-100">
+                <th class="py-3 px-4 text-left">Order ID</th>
+                <th class="py-3 px-4 text-left">Customer</th>
+                <th class="py-3 px-4 text-left">Amount</th>
+                <th class="py-3 px-4 text-left">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="py-3 px-4">#4521</td>
+                <td class="py-3 px-4">John Doe</td>
+                <td class="py-3 px-4">$120.00</td>
+                <td class="py-3 px-4 text-green-600 font-medium">Completed</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-3 px-4">#4520</td>
+                <td class="py-3 px-4">Emily Clark</td>
+                <td class="py-3 px-4">$89.50</td>
+                <td class="py-3 px-4 text-yellow-600 font-medium">Pending</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">#4519</td>
+                <td class="py-3 px-4">Michael Lee</td>
+                <td class="py-3 px-4">$45.00</td>
+                <td class="py-3 px-4 text-red-600 font-medium">Cancelled</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Top Products -->
+      <div class="bg-white rounded-2xl shadow p-4">
+        <h2 class="text-lg font-bold mb-4">Top Products</h2>
+        <ul class="space-y-3">
+          <li class="flex items-center justify-between">
+            <span>Wireless Headphones</span>
+            <span class="font-bold">320 sold</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <span>Smart Watch</span>
+            <span class="font-bold">210 sold</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <span>Bluetooth Speaker</span>
+            <span class="font-bold">180 sold</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Charts Section -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-lg font-bold mb-4">Sales Overview (Bar Chart)</h2>
+        <canvas id="salesBarChart" class="w-full max-h-64"></canvas>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-lg font-bold mb-4">Product Share (Doughnut Chart)</h2>
+        <canvas id="productDoughnutChart" class="w-full max-h-64"></canvas>
+      </div>
+    </section>
+
+    <!-- User List Section -->
+    <section class="bg-white rounded-2xl shadow p-6 mt-6">
+      <h2 class="text-lg font-bold mb-4">Users List</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm text-left">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="py-3 px-4">User</th>
+              <th class="py-3 px-4">Email</th>
+              <th class="py-3 px-4">Role</th>
+              <th class="py-3 px-4">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="py-3 px-4 flex items-center gap-2"><img src="https://i.pravatar.cc/32?u=1" class="rounded-full"> John Doe</td>
+              <td class="py-3 px-4">john@example.com</td>
+              <td class="py-3 px-4">Admin</td>
+              <td class="py-3 px-4 text-green-600 font-medium">Active</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-3 px-4 flex items-center gap-2"><img src="https://i.pravatar.cc/32?u=2" class="rounded-full"> Sarah Lee</td>
+              <td class="py-3 px-4">sarah@example.com</td>
+              <td class="py-3 px-4">Seller</td>
+              <td class="py-3 px-4 text-green-600 font-medium">Active</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 flex items-center gap-2"><img src="https://i.pravatar.cc/32?u=3" class="rounded-full"> Mark Smith</td>
+              <td class="py-3 px-4">mark@example.com</td>
+              <td class="py-3 px-4">Customer</td>
+              <td class="py-3 px-4 text-yellow-600 font-medium">Pending</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Bar Chart
+    const barCtx = document.getElementById('salesBarChart').getContext('2d');
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Sales ($)',
+          data: [1200, 1900, 3000, 2500, 3200, 4000],
+          backgroundColor: 'rgba(99, 102, 241, 0.5)',
+          borderColor: 'rgba(99, 102, 241, 1)',
+          borderWidth: 2,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+
+    // Doughnut Chart
+    const doughnutCtx = document.getElementById('productDoughnutChart').getContext('2d');
+    new Chart(doughnutCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Headphones', 'Watches', 'Speakers', 'Accessories'],
+        datasets: [{
+          data: [320, 210, 180, 120],
+          backgroundColor: [
+            'rgba(99, 102, 241, 0.8)',
+            'rgba(16, 185, 129, 0.8)',
+            'rgba(59, 130, 246, 0.8)',
+            'rgba(234, 179, 8, 0.8)'
+          ]
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+  </script>
+</body>
+</html>
