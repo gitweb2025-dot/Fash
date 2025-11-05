@@ -44,7 +44,7 @@
         height: 0.125rem;
         margin: 0.4rem auto;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        background-color: currentColor;
+        background-color: black;
       }
 
       .hamburger.active span:nth-child(1) {
@@ -175,7 +175,7 @@
 
           <!-- Men -->
           <a
-            href="./404.html"
+            href="./men.html"
             class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Men
@@ -183,21 +183,21 @@
 
           <!-- Women -->
           <a
-            href="./404.html"
+            href="./women.html"
             class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Women
           </a>
           <!-- Contact -->
           <a
-            href="./404.html"
+            href="./contact.html"
             class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Contact
           </a>
           <!-- Dashboard -->
           <a
-            href="./404.html"
+            href="./dashboard.html"
             class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Dashboard
@@ -242,7 +242,7 @@
       <!-- Mobile Menu -->
       <nav id="mobileMenu" class="mobile-menu h-screen lg:hidden shadow-md">
         <ul
-          class="flex flex-col space-y-4 p-3 text-sm font-medium h-screen sm:w-96 bg-white"
+          class="flex flex-col space-y-4 p-3 text-sm font-medium h-screen sm:w-96 bg-white text-black"
         >
           <!-- Home dropDown  -->
           <div class="relative">
@@ -266,7 +266,7 @@
                   Home 2
                 </a>
               </li>
-              <li class=""></li>
+             
               <!-- <li>
                 <a
                   href="./Home/Home1.html"
@@ -280,7 +280,7 @@
           <!-- Men -->
           <li>
             <a
-              href="./404.html"
+              href="./men.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Men</a
             >
@@ -288,7 +288,7 @@
           <!-- Women -->
           <li>
             <a
-              href="./404.html"
+              href="./women.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Women</a
             >
@@ -296,7 +296,7 @@
           <!-- Contact -->
           <li>
             <a
-              href="./404.html"
+              href="./contact.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Contact</a
             >
@@ -304,19 +304,11 @@
           <!-- Dashboard -->
           <li>
             <a
-              href="./404.html"
+              href="./dashboard.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Dashboard</a
             >
           </li>
-          <!-- <li>
-            <button
-              id="book"
-              class="nav-link text-gray-500 block hover:text-gray-800 transition-colors"
-            >
-              Book Now
-            </button>
-          </li> -->
           <li>
             <a
               href="./Signin.html"
@@ -367,17 +359,53 @@
       </script>
     </header>
 
-    <section class="overflow-hidden relative">
-      <div class="absolute inset-0">
+    <!-- Home -->
+    <main class="relative p-3 overflow-x-hidden text-white">
+      <div class="absolute p-3 inset-0 z-[-1]">
         <img
-          class="w-full h-full overflow-hidden object-cover object-center lg:object-top"
+          class="w-full h-[500px] object-cover object-[30%_30%] brightness-30 md:brightness-100"
           src="./Assets/contact1.webp"
-          alt=""
+          alt="bg-image"
         />
       </div>
-      <!-- MAIN SECTION  -->
-      <section class="px-3 py-3 overflow-x-hidden">
 
+      <div class="grid grid-cols-1 md:grid-cols-2 md:gap-40">
+        <div></div>
+        <div
+          class="h-[500px] w-full flex flex-col items-start justify-center px-3 space-y-4 py-4"
+        >
+          <p
+            data-aos="zoom-in-up"
+            data-aos-delay="50"
+            class="px-2 py-1 text-xs border border-gray-300 rounded-full w-fit"
+          >
+            Reach Out To Us
+          </p>
+          <h1
+            data-aos="zoom-in-up"
+            data-aos-delay="100"
+            class="text-2xl md:text-4xl font-bold text-center"
+          >
+            Get In Touch
+          </h1>
+          <p data-aos="zoom-in-up" data-aos-delay="150">
+            Or just reach out manually to
+            <a href="../404.html" class="text-gray-300 hover:underline"
+              >contact@fashion.com</a
+            >
+          </p>
+          <p data-aos="zoom-in-up" data-aos-delay="200">
+            We value the connection with our community and are here to assist in
+            any way we can. Feel free to reach out through the following
+            channels:
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <section class="overflow-hidden relative">
+      <!-- MAIN SECTION  -->
+      <!-- <section class="px-3 py-3 overflow-x-hidden">
         <div class="w-full mx-auto py-6 overflow-hidden font-primary">
           <div class="w-full flex-center space-y-5">
             <p
@@ -411,18 +439,18 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- FORM -->
       <section class="mb-10 overflow-x-hidden px-3 py-6 relative">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
           <div
-            class="flex flex-wrap justify-center md:justify-between items-center gap-6 bg-black/35 py-4 p-4 lg:px-8 rounded-2xl w-full overflow-hidden"
+            class="flex flex-wrap justify-center md:justify-between items-center gap-6 py-4 p-4 lg:px-8 rounded-2xl w-full overflow-hidden text-black"
           >
             <div
               data-aos="zoom-in"
               data-aos-delay="50"
-              class="flex flex-col items-start md:items-center bg-black/50 backdrop-blur-sm rounded-2xl p-2 w-full md:w-[250px]"
+              class="flex flex-col items-center bg-white shadow-lg backdrop-blur-sm rounded-2xl px-3 py-6 w-full md:w-[250px] text-center"
             >
               <svg
                 class="bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
@@ -446,7 +474,7 @@
             <div
               data-aos="zoom-in"
               data-aos-delay="150"
-              class="flex flex-col items-start md:items-center backdrop-blur-sm rounded-2xl p-2 w-full md:w-[250px] bg-black/50"
+              class="flex flex-col items-center backdrop-blur-sm rounded-2xl px-3 py-6 w-full md:w-[250px] bg-white shadow-lg text-center"
             >
               <svg
                 class="bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
@@ -470,7 +498,7 @@
             <div
               data-aos="zoom-in"
               data-aos-delay="250"
-              class="flex flex-col items-start md:items-center backdrop-blur-sm rounded-2xl p-2 w-full md:w-[250px] bg-black/50"
+              class="flex flex-col items-center backdrop-blur-sm rounded-2xl px-3 py-6 w-full md:w-[250px] bg-white shadow-lg text-center"
             >
               <svg
                 class="bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
@@ -493,13 +521,15 @@
             </div>
           </div>
 
-          <div class="backdrop-blur-md bg-black/35 rounded-2xl ">
+          <div
+            class="backdrop-blur-md bg-white shadow-lg rounded-2xl text-black border border-black/5"
+          >
             <form
               data-aos="zoom-in-right"
               data-aos-delay="100"
               method="get"
               action="../404.html"
-              class="flex flex-col items-start text-sm px-4  border border-black/10 py-10 w-full shadow-xl"
+              class="flex flex-col items-start text-sm px-4 py-10 w-full"
             >
               <p class="text-xl uppercase font-bold pb-10 text-left">
                 How We Can Help
@@ -556,6 +586,29 @@
         </div>
       </section>
     </section>
+
+    <div class="p-3 overflow-hidden">
+      <div
+        class="py-16 md:w-full max-md:text-center flex flex-col md:flex-row items-center justify-between text-left rounded-2xl px-3 md:p-10 text-white bg-gray-100"
+      >
+        <div>
+          <h1
+            class="text-2xl md:text-4xl md:text-[46px] md:leading-[60px] font-semibold bg-linear-to-r from-[#4d183f] to-[#CAABFF] text-transparent bg-clip-text"
+          >
+            Ready to try-out this app?
+          </h1>
+          <p class="text-black text-lg">
+            Your next favourite tool is just one click away.
+          </p>
+        </div>
+        <button
+          id="get"
+          class="px-12 py-3 text-white bg-[#4d183f] rounded-full text-sm mt-4 tranform hover:scale-95 transition duration-500 ease-in-out cursor-pointer"
+        >
+          Get Started
+        </button>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="relative p-3 overflow-x-hidden">
@@ -671,6 +724,9 @@
       </div>
     </footer>
 
+    <!-- Toast area -->
+    <div id="toast" class="fixed left-16 top-16 z-50"></div>
+
     <!-- Aos Animation  -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
@@ -689,6 +745,20 @@
     </script>
 
     <script>
+      function toast(msg) {
+        const t = document.createElement("div");
+        t.className = "mb-2 px-4 py-2 rounded bg-red-500 text-white shadow";
+        t.textContent = msg;
+        document.getElementById("toast").appendChild(t);
+        setTimeout(() => {
+          t.remove();
+        }, 2500);
+      }
+      const get = document.getElementById("get");
+      get.addEventListener("click", () => {
+        toast("Coming soon...");
+      });
+
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
       const links = mobileMenu.querySelectorAll(".nav-link");

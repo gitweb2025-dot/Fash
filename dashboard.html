@@ -3,15 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>EVENT</title>
-    <meta
-      name="description"
-      content="Professional event management services for weddings, corporate events, parties, and exhibitions. We design, plan, and execute unforgettable experiences."
-    />
-    <meta
-      name="keywords"
-      content="event management, wedding planner, corporate events, party planning, exhibition management, event organizer, conferences, celebrations"
-    />
+    <title>Fashion</title>
 
     <!-- Font Awesome Cdn Link -->
     <link
@@ -358,36 +350,57 @@
     </header>
 
     <!-- Main Content -->
-    <main class="py-12 px-3 space-y-10 ">
-
-        <div class="font-primary">
-            <h1 class="font-bold text-2xl md:text-3xl">Welcome Back, Deva!</h1>
-        </div>
+    <main class="py-12 px-3 space-y-10">
+      <div class="font-primary">
+        <h1 class="font-bold text-2xl md:text-3xl">Welcome Back, Deva!</h1>
+      </div>
 
       <!-- Stats -->
-      <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
+      <section class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div
+          class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition border border-black/10"
+        >
           <h3 class="text-sm text-gray-500">Total Sales</h3>
           <p class="text-2xl font-bold mt-1">$12,540</p>
         </div>
-        <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
+        <div
+          class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition border border-black/20"
+        >
           <h3 class="text-sm text-gray-500">Orders</h3>
           <p class="text-2xl font-bold mt-1">420</p>
         </div>
-        <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
+        <div
+          class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition border border-black/20"
+        >
           <h3 class="text-sm text-gray-500">Visitors</h3>
           <p class="text-2xl font-bold mt-1">8,120</p>
         </div>
-        <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
+        <div
+          class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition border border-black/20"
+        >
           <h3 class="text-sm text-gray-500">Stock Items</h3>
           <p class="text-2xl font-bold mt-1">312</p>
+        </div>
+      </section>
+
+      <!-- Charts Section -->
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl shadow p-6 border border-black/20">
+          <h2 class="text-lg font-bold mb-4">Sales Overview</h2>
+          <canvas id="salesBarChart" class="w-full max-h-64"></canvas>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6 border border-black/20">
+          <h2 class="text-lg font-bold mb-4">Product Share</h2>
+          <canvas id="productDoughnutChart" class="w-full max-h-64"></canvas>
         </div>
       </section>
 
       <!-- Tables & Cards -->
       <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <!-- Recent Orders -->
-        <div class="lg:col-span-2 bg-white rounded-2xl shadow p-4">
+        <div
+          class="lg:col-span-2 bg-white rounded-2xl shadow p-4 border border-black/20"
+        >
           <h2 class="text-lg font-bold mb-4">Recent Orders</h2>
           <div class="overflow-x-auto">
             <table class="min-w-full text-sm border border-black">
@@ -426,42 +439,40 @@
         </div>
 
         <!-- Top Products -->
-        <div class="bg-white rounded-2xl shadow p-4">
+        <div class="bg-white rounded-2xl shadow p-4 border border-black/20">
           <h2 class="text-lg font-bold mb-4">Top Products</h2>
           <ul class="space-y-3">
             <li class="flex items-center justify-between">
-              <span>Wireless Headphones</span>
+              <span>Watches</span>
               <span class="font-bold">320 sold</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>Smart Watch</span>
+              <span>Shoes</span>
               <span class="font-bold">210 sold</span>
             </li>
             <li class="flex items-center justify-between">
-              <span>Bluetooth Speaker</span>
+              <span>Sarees</span>
               <span class="font-bold">180 sold</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>Bag</span>
+              <span class="font-bold">270 sold</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>Kurtha</span>
+              <span class="font-bold">980 sold</span>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- Charts Section -->
-      <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div class="bg-white rounded-2xl shadow p-6">
-          <h2 class="text-lg font-bold mb-4">Sales Overview (Bar Chart)</h2>
-          <canvas id="salesBarChart" class="w-full max-h-64"></canvas>
-        </div>
-        <div class="bg-white rounded-2xl shadow p-6">
-          <h2 class="text-lg font-bold mb-4">Product Share (Doughnut Chart)</h2>
-          <canvas id="productDoughnutChart" class="w-full max-h-64"></canvas>
-        </div>
-      </section>
-
       <!-- User List Section -->
-      <section class="bg-white rounded-2xl shadow p-6 mt-6">
+      <section
+        class="bg-white rounded-2xl shadow-lg border border-black/20 p-6 mt-6"
+      >
         <h2 class="text-lg font-bold mb-4">Users List</h2>
         <div class="overflow-x-auto">
-          <table class="min-w-full text-sm text-left">
+          <table class="min-w-full text-sm text-left border border-black">
             <thead class="bg-gray-100">
               <tr>
                 <th class="py-3 px-4">User</th>
@@ -513,6 +524,13 @@
       </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="border-t border-gray-300 py-4 px-3">
+      <p class="text-center text-sm md:text-base text-gray-500/80">
+        Copyright 2025 © stackly All Right Reserved.
+      </p>
+    </footer>
+
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -527,8 +545,18 @@
             {
               label: "Sales ($)",
               data: [1200, 1900, 3000, 2500, 3200, 4000],
-              backgroundColor: "rgba(99, 102, 241, 0.5)",
-              borderColor: "rgba(99, 102, 241, 1)",
+              backgroundColor: [
+                "rgba(99, 102, 241, 0.8)",
+                "rgba(16, 185, 129, 0.8)",
+                "rgba(59, 130, 246, 0.8)",
+                "rgba(234, 179, 8, 0.8)",
+              ],
+              borderColor: [
+                "rgba(99, 102, 241, 0.8)",
+                "rgba(16, 185, 129, 0.8)",
+                "rgba(59, 130, 246, 0.8)",
+                "rgba(234, 179, 8, 0.8)",
+              ],
               borderWidth: 2,
               borderRadius: 6,
             },
@@ -547,7 +575,7 @@
       new Chart(doughnutCtx, {
         type: "doughnut",
         data: {
-          labels: ["Headphones", "Watches", "Speakers", "Accessories"],
+          labels: ["Shoes", "Watches", "Shirts", "Sarees"],
           datasets: [
             {
               data: [320, 210, 180, 120],
@@ -566,61 +594,6 @@
         },
       });
     </script>
-
-    <!-- RECENT ACTIVITY -->
-    <section class="px-4 mb-10">
-      <h3 class="text-2xl font-semibold mb-4 text-gray-100">
-        Recent Activities
-      </h3>
-      <div class="bg-white/5 border border-white/20 rounded-2xl py-6 px-4">
-        <ul
-          class="grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 items-center gap-6 text-sm text-gray-300"
-        >
-          <li
-            class="flex flex-col justify-center space-y-3 bg-black p-4 rounded-2xl"
-          >
-            <h1 class="text-lg font-bold">Sound Fest</h1>
-            <p>sold 1,200 tickets</p>
-            <p class="text-gray-500">2h ago</p>
-          </li>
-          <li
-            class="flex flex-col justify-center space-y-3 bg-black p-4 rounded-2xl"
-          >
-            <h1 class="text-lg font-bold">Startup Meet</h1>
-            <p>added 3 new sponsors</p>
-            <p class="text-gray-500">5h ago</p>
-          </li>
-          <li
-            class="flex flex-col justify-center space-y-3 bg-black p-4 rounded-2xl"
-          >
-            <h1 class="text-lg font-bold">Workshop 2025</h1>
-            <p>registration opened</p>
-            <p class="text-gray-500">1d ago</p>
-          </li>
-          <li
-            class="flex flex-col justify-center space-y-3 bg-black p-4 rounded-2xl"
-          >
-            <h1 class="text-lg font-bold">Music Gala</h1>
-            <p>reached full capacity</p>
-            <p class="text-gray-500">2d ago</p>
-          </li>
-          <li
-            class="flex flex-col justify-center space-y-3 bg-black p-4 rounded-2xl"
-          >
-            <h1 class="text-lg font-bold">Conference</h1>
-            <p>reached 1000+ people</p>
-            <p class="text-gray-500">2d ago</p>
-          </li>
-          <li
-            class="flex flex-col justify-center space-y-3 bg-black p-4 rounded-2xl"
-          >
-            <h1 class="text-lg font-bold">Music ConcertX</h1>
-            <p>Booked 50k</p>
-            <p class="text-gray-500">2d ago</p>
-          </li>
-        </ul>
-      </div>
-    </section>
 
     <!-- Aos Animation  -->
     <script
