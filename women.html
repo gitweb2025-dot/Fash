@@ -826,8 +826,8 @@
           </p>
 
           <div class="flex items-center gap-4 mt-6">
-            <a
-              href=""
+            <button
+              id="getApp"
               aria-label="googlePlayBtn"
               class="hover:scale-95 transition-all duration-200 ease-in"
               type="button"
@@ -837,9 +837,9 @@
                 src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/appDownload/googlePlayBtn.svg"
                 alt="googlePlayBtn"
               />
-            </a>
-            <a
-              href=""
+            </button>
+            <button
+              id="getApp"
               aria-label="appleStoreBtn"
               class="hover:scale-95 transition-all duration-200 ease-in"
               type="button"
@@ -849,7 +849,7 @@
                 src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/appDownload/appleStoreBtn.svg"
                 alt="appleStoreBtn"
               />
-            </a>
+            </button>
           </div>
         </div>
 
@@ -883,7 +883,9 @@
             </h3>
             <ul class="text-sm space-y-1">
               <li>
-                <a href="./index.html" class="hover:underline transition">Home</a>
+                <a href="./index.html" class="hover:underline transition"
+                  >Home</a
+                >
               </li>
               <li>
                 <a href="./men.html" class="hover:underline transition">Men</a>
@@ -906,22 +908,26 @@
             </h3>
             <ul class="text-sm space-y-1">
               <li>
-                <a href="./404.html" class="hover:underline transition"
+                <a href="./info.html" class="hover:underline transition"
                   >Delivery Information</a
                 >
               </li>
               <li>
-                <a href="./404.html" class="hover:underline transition"
+                <a href="./info.html#return" class="hover:underline transition"
                   >Return & Refund Policy</a
                 >
               </li>
               <li>
-                <a href="./404.html" class="hover:underline transition"
+                <a
+                  href="./info.html#customer"
+                  class="hover:underline transition"
                   >Customer care</a
                 >
               </li>
               <li>
-                <a href="./404.html" class="hover:underline transition"
+                <a
+                  href="./info.html#contactus"
+                  class="hover:underline transition"
                   >Contact Us</a
                 >
               </li>
@@ -1609,6 +1615,12 @@
         }
 
         renderProducts(filtered);
+      });
+
+      document.querySelectorAll(".get").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          toast("Launching soon...");
+        });
       });
 
       const hamburger = document.getElementById("hamburger");

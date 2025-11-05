@@ -123,7 +123,7 @@
     </style>
   </head>
 
-  <body class="antialiased bg-white text-white relative">
+  <body class="antialiased bg-white text-black relative">
     <!-- Navbar  -->
     <header
       class="sticky top-0 z-40 border-b border-slate-200 bg-white backdrop-blur w-full mx-auto"
@@ -359,256 +359,349 @@
       </script>
     </header>
 
-    <!-- Home -->
-    <main class="relative p-3 overflow-x-hidden text-white">
-      <div class="absolute p-3 inset-0 z-[-1]">
-        <img
-          class="w-full h-[500px] object-cover object-[30%_30%] brightness-20 md:brightness-100"
-          src="./Assets/contact1.webp"
-          alt="bg-image"
-        />
-      </div>
+    <!-- Container -->
+    <div class="mx-auto px-6 py-12 space-y-12">
+      <!-- Page Header -->
+      <header class="text-center mb-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Customer Information
+        </h1>
+        <p class="text-gray-600 mt-2">
+          Learn about our delivery, return policy, and how to contact us.
+        </p>
+      </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 md:gap-40">
-        <div></div>
-        <div
-          class="h-[500px] w-full flex flex-col items-start justify-center px-3 space-y-4 py-4"
+      <section class="grid grid-cols-1 gap-16 overflow-x-hidden">
+        <!-- Delivery Information -->
+        <section id="delivery" class="bg-white shadow-md rounded-lg p-3 md:p-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+              <img
+                class="h-[420px] w-full object-cover object-center rounded-2xl"
+                src="./Assets/delivery.webp"
+                alt="delivery"
+              />
+            </div>
+            <div class="flex flex-col justify-center">
+              <h2 class="text-2xl font-semibold text-gray-900 mb-4 uppercase">
+                Delivery Information
+              </h2>
+              <p class="mb-4">
+                We aim to process and dispatch all orders within
+                <strong>1–2 business days</strong> of purchase. Delivery times
+                may vary depending on your location and chosen shipping method.
+              </p>
+              <ul class="list-disc list-inside space-y-1 mb-4">
+                <li><strong>Standard Delivery:</strong> 3–7 business days</li>
+                <li><strong>Express Delivery:</strong> 1–3 business days</li>
+                <li>
+                  <strong>International Shipping:</strong> 7–14 business days
+                </li>
+              </ul>
+              <p class="text-gray-700 mb-4">
+                Once your order is shipped, you’ll receive a confirmation email
+                with tracking details. Please ensure that your shipping address
+                is correct at checkout. We are not responsible for lost packages
+                due to incorrect addresses.
+              </p>
+              <p class="text-gray-700">
+                We value the connection with our community and are here to
+                assist in any way we can. Feel free to reach out through the
+                following channels. Please ensure that your shipping address is
+                correct at checkout.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Return & Refund Policy -->
+        <section
+          id="return"
+          class="bg-white shadow-md rounded-lg p-3 md:p-8 scroll-mt-20"
         >
-          <p
-            data-aos="zoom-in-up"
-            data-aos-delay="50"
-            class="px-2 py-1 text-xs border border-gray-300 rounded-full w-fit"
-          >
-            Reach Out To Us
-          </p>
-          <h1
-            data-aos="zoom-in-up"
-            data-aos-delay="100"
-            class="text-2xl md:text-4xl font-bold text-center"
-          >
-            Get In Touch
-          </h1>
-          <p data-aos="zoom-in-up" data-aos-delay="150">
-            Or just reach out manually to
-            <a href="../404.html" class="text-gray-300 hover:underline"
-              >contact@fashion.com</a
-            >
-          </p>
-          <p data-aos="zoom-in-up" data-aos-delay="200">
-            We value the connection with our community and are here to assist in
-            any way we can. Feel free to reach out through the following
-            channels:
-          </p>
-        </div>
-      </div>
-    </main>
-
-    <section class="overflow-hidden relative">
-      <!-- MAIN SECTION  -->
-      <!-- <section class="px-3 py-3 overflow-x-hidden">
-        <div class="w-full mx-auto py-6 overflow-hidden font-primary">
-          <div class="w-full flex-center space-y-5">
-            <p
-              data-aos="zoom-in-up"
-              data-aos-delay="50"
-              class="px-2 py-1 text-xs border border-gray-300 rounded-full w-fit mx-auto"
-            >
-              Reach Out To Us
-            </p>
-            <h1
-              data-aos="zoom-in-up"
-              data-aos-delay="100"
-              class="text-2xl md:text-4xl font-bold text-center"
-            >
-              Get In Touch
-            </h1>
-            <p data-aos="zoom-in-up" data-aos-delay="150" class="text-center">
-              Or just reach out manually to
-              <a href="../404.html" class="text-gray-300 hover:underline"
-                >contact@fashion.com</a
-              >
-            </p>
-            <p
-              data-aos="zoom-in-up"
-              data-aos-delay="200"
-              class="max-w-2xl mx-auto text-center"
-            >
-              We value the connection with our community and are here to assist
-              in any way we can. Feel free to reach out through the following
-              channels:
-            </p>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- FORM -->
-      <section class="mb-10 overflow-x-hidden px-3 py-6 relative">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
-          <div
-            class="flex flex-wrap justify-center md:justify-between items-center gap-6 py-4 p-4 lg:px-8 rounded-2xl w-full overflow-hidden text-black"
-          >
-            <div
-              data-aos="zoom-in"
-              data-aos-delay="50"
-              class="flex flex-col items-center bg-white shadow-lg backdrop-blur-sm rounded-2xl px-3 py-6 w-full md:w-[250px] text-center"
-            >
-              <svg
-                class="bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 4.125H3A1.125 1.125 0 0 0 1.875 5.25V18a1.875 1.875 0 0 0 1.875 1.875h16.5A1.875 1.875 0 0 0 22.125 18V5.25A1.125 1.125 0 0 0 21 4.125m-2.892 2.25L12 11.974 5.892 6.375zM4.125 17.625V7.808l7.115 6.522a1.125 1.125 0 0 0 1.52 0l7.115-6.522v9.817z"
-                  fill="currentColor"
-                />
-              </svg>
-              <p class="text-lg font-bold mt-2">Email Support</p>
-              <p class="mt-1 mb-4">Our team can respond on time.</p>
-              <a href="../404.html" class="text-gray-500 font-semibold">
-                contact@fashion.com
-              </a>
-            </div>
-            <div
-              data-aos="zoom-in"
-              data-aos-delay="150"
-              class="flex flex-col items-center backdrop-blur-sm rounded-2xl px-3 py-6 w-full md:w-[250px] bg-white shadow-lg text-center"
-            >
-              <svg
-                class="bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M22.875 19.125H21.75V9.309a1.125 1.125 0 0 0-.375-2.184h-3.75V4.809a1.125 1.125 0 0 0-.375-2.184H3.75a1.125 1.125 0 0 0-.375 2.184v14.316H2.25a1.125 1.125 0 1 0 0 2.25h20.625a1.125 1.125 0 1 0 0-2.25M19.5 9.375v9.75h-1.875v-9.75zm-13.875-4.5h9.75v14.25h-1.5V15a1.125 1.125 0 0 0-1.125-1.125h-4.5A1.125 1.125 0 0 0 7.125 15v4.125h-1.5zm6 14.25h-2.25v-3h2.25zM6.75 7.5a1.125 1.125 0 0 1 1.125-1.125h.75a1.125 1.125 0 0 1 0 2.25h-.75A1.125 1.125 0 0 1 6.75 7.5m4.5 0a1.125 1.125 0 0 1 1.125-1.125h.75a1.125 1.125 0 0 1 0 2.25h-.75A1.125 1.125 0 0 1 11.25 7.5m-4.5 3.75a1.125 1.125 0 0 1 1.125-1.125h.75a1.125 1.125 0 1 1 0 2.25h-.75A1.125 1.125 0 0 1 6.75 11.25m4.5 0a1.125 1.125 0 0 1 1.125-1.125h.75a1.125 1.125 0 1 1 0 2.25h-.75a1.125 1.125 0 0 1-1.125-1.125"
-                  fill="currentColor"
-                />
-              </svg>
-              <p class="text-lg font-bold mt-2">Visit Our Office</p>
-              <p class="mt-1 mb-4">Visit our location in real life.</p>
-              <span class="text-gray-500 font-semibold">
-                221b Elementary Avenue, NY
-              </span>
-            </div>
-            <div
-              data-aos="zoom-in"
-              data-aos-delay="250"
-              class="flex flex-col items-center backdrop-blur-sm rounded-2xl px-3 py-6 w-full md:w-[250px] bg-white shadow-lg text-center"
-            >
-              <svg
-                class="bg-gray-500/20 p-2.5 aspect-square rounded-full size-10"
-                width="21"
-                height="21"
-                viewBox="0 0 21 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="m19 13.513-4.415-1.98-.017-.007a1.87 1.87 0 0 0-1.886.243l-2.091 1.781c-1.22-.66-2.478-1.91-3.14-3.113l1.787-2.125q.043-.051.08-.108a1.88 1.88 0 0 0 .148-1.782L7.488 2A1.88 1.88 0 0 0 5.539.89 5.65 5.65 0 0 0 .625 6.5c0 7.651 6.224 13.875 13.875 13.875a5.65 5.65 0 0 0 5.61-4.914A1.88 1.88 0 0 0 19 13.513m-4.5 4.612A11.64 11.64 0 0 1 2.875 6.5a3.4 3.4 0 0 1 2.67-3.332l1.764 3.938-1.796 2.14q-.044.051-.08.108a1.88 1.88 0 0 0-.12 1.841c.883 1.808 2.702 3.615 4.529 4.5a1.88 1.88 0 0 0 1.845-.136q.055-.036.105-.08l2.102-1.787 3.938 1.763a3.4 3.4 0 0 1-3.332 2.67"
-                  fill="currentColor"
-                />
-              </svg>
-              <p class="text-lg font-bold mt-2">Call Us Directly</p>
-              <p class="mt-1 mb-4">Available during working hours.</p>
-              <a href="../404.html" class="text-gray-500 font-semibold">
-                (+1) 2344567789
-              </a>
-            </div>
-          </div>
-
-          <div
-            class="backdrop-blur-md bg-white shadow-lg rounded-2xl text-black border border-black/5"
-          >
-            <form
-              data-aos="zoom-in-right"
-              data-aos-delay="100"
-              method="get"
-              action="../404.html"
-              class="flex flex-col items-start text-sm px-4 py-10 w-full"
-            >
-              <p class="text-xl uppercase font-bold pb-10 text-left">
-                Drop your Query
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="flex flex-col justify-center">
+              <h2 class="text-2xl font-semibold text-gray-900 mb-4 uppercase">
+                Return & Refund Policy
+              </h2>
+              <p class="mb-4">
+                We want you to love your purchase! If you’re not completely
+                satisfied, you can return or exchange items within
+                <strong>7–14 days</strong> of receiving your order.
               </p>
 
-              <div class="flex flex-col md:flex-row items-center gap-8 w-full">
-                <div class="w-full">
-                  <label class="">Name</label>
-                  <input
-                    placeholder="Enter your Name"
-                    class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
-                    type="text"
-                    required
-                  />
-                </div>
-                <div class="w-full">
-                  <label class="">Phone</label>
-                  <input
-                    placeholder="123-456-7890"
-                    class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
-                    type="tel"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    required
-                  />
-                </div>
-                <div class="w-full">
-                  <label class="">Your Email</label>
-                  <input
-                    placeholder="Enter your E-mail"
-                    class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
-                    type="email"
-                    required
-                  />
-                </div>
-              </div>
+              <h3 class="text-xl font-semibold mb-2">
+                Eligibility for Returns
+              </h3>
+              <ul class="list-disc list-inside space-y-1 mb-4">
+                <li>
+                  Items must be unused, unwashed, and in original packaging.
+                </li>
+                <li>
+                  Proof of purchase (order number or receipt) is required.
+                </li>
+                <li>
+                  Certain items (e.g., sale items or customized products) may
+                  not be eligible for return.
+                </li>
+              </ul>
 
-              <div class="mt-6 w-full">
-                <label class="">Message</label>
-                <textarea
-                  placeholder="Enter your Message"
-                  class="w-full mt-2 p-2 h-40 border border-gray-500/30 rounded resize-none outline-none focus:border-gray-300"
-                  required
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                class="mt-5 bg-gray-600 text-white h-12 w-56 px-4 rounded active:scale-95 transition cursor-pointer"
-              >
-                Send Message
-              </button>
-            </form>
+              <h3 class="text-xl font-semibold mb-2">Refunds</h3>
+              <p class="mb-4">
+                Once we receive and inspect your returned item, we’ll notify you
+                and issue a refund to your original payment method within
+                <strong>5–10 business days</strong>.
+              </p>
+            </div>
+            <div>
+              <img
+                class="h-[420px] w-full object-cover object-[20%_40%] md:object-[40%_40%] rounded-2xl"
+                src="./Assets/return.webp"
+                alt="return"
+              />
+            </div>
           </div>
-        </div>
-      </section>
-    </section>
+        </section>
 
-    <div class="p-3 overflow-hidden">
-      <div
-        class="py-16 md:w-full max-md:text-center flex flex-col md:flex-row items-center justify-between text-left rounded-2xl px-3 md:p-10 text-white bg-gray-100"
-      >
-        <div>
-          <h1
-            class="text-2xl md:text-4xl md:text-[46px] md:leading-[60px] font-semibold bg-linear-to-r from-[#4d183f] to-[#CAABFF] text-transparent bg-clip-text"
-          >
-            Ready to try-out this app?
-          </h1>
-          <p class="text-black text-lg">
-            Your next favourite tool is just one click away.
-          </p>
-        </div>
-        <button
-          id="get"
-          class="px-12 py-3 text-white bg-[#4d183f] rounded-full text-sm mt-4 tranform hover:scale-95 transition duration-500 ease-in-out cursor-pointer"
+        <!-- Customer Care -->
+        <section
+          id="customer"
+          class="bg-white shadow-md rounded-lg p-3 md:p-8 scroll-mt-20"
         >
-          Get Started
-        </button>
-      </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+              <img
+                class="h-[420px] w-full object-cover object-center rounded-2xl"
+                src="./Assets/customer.webp"
+                alt="Customer Care"
+              />
+            </div>
+            <div class="flex flex-col justify-center">
+              <h2 class="text-2xl font-semibold text-gray-900 mb-4 uppercase">
+                Customer Care
+              </h2>
+              <p class="mb-4">
+                Our customer care team is here to help with any questions or
+                issues regarding your order, products, or account.
+              </p>
+              <ul class="space-y-2">
+                <li>
+                  📧 <strong>Email:</strong>
+                  <a href="./404.html" class="text-blue-600 hover:underline"
+                    >support@stackly.com</a
+                  >
+                </li>
+                <li>📞 <strong>Phone/WhatsApp:</strong> +1 234 567 890</li>
+                <li>
+                  💬 <strong>Live Chat:</strong> Available Mon–Fri, 9 AM – 6 PM
+                </li>
+              </ul>
+              <p class="mt-4 text-gray-700">
+                We strive to respond to all inquiries within
+                <strong>24 hours (business days)</strong>.
+              </p>
+
+              <!-- <h3 class="text-xl font-semibold mb-2">Refunds</h3> -->
+              <p class="mt-4 mb-4">
+                Once we receive and inspect your returned item, we’ll notify you
+                and issue a refund to your original payment method within
+                <strong>5–10 business days</strong>.
+              </p>
+
+              <!-- <h3 class="text-xl font-semibold mb-2">Exchanges</h3> -->
+              <p>
+                If you’d like a different size or color, please contact us
+                before returning your item so we can reserve the replacement.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Us -->
+        <section
+          id="contactus"
+          class="bg-white shadow-md rounded-lg p-3 md:p-8 scroll-mt-20"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="flex flex-col justify-center">
+              <h2 class="text-2xl font-semibold text-gray-900 mb-4 uppercase">
+                Contact Us
+              </h2>
+              <p class="mb-4">We’d love to hear from you!</p>
+              <ul class="space-y-2">
+                <li>
+                  🏢 <strong>Address:</strong> 123 Market Street, Your City,
+                  Country
+                </li>
+                <li>
+                  📧 <strong>Email:</strong>
+                  <a href="./404.html" class="text-blue-600 hover:underline"
+                    >info@stackly.com</a
+                  >
+                </li>
+                <li>📞 <strong>Phone:</strong> +1 234 567 890</li>
+                <li>
+                  🌐 <strong>Website:</strong>
+                  <a href="./404.html" class="text-blue-600 hover:underline"
+                    >www.stackly.com</a
+                  >
+                </li>
+              </ul>
+              <p class="mt-4 text-gray-700">
+                For collaborations, wholesale inquiries, or press, please email:
+                <a href="./404.html" class="text-blue-600 hover:underline"
+                  >partnerships@stackly.com</a
+                >
+              </p>
+              <p class="mb-4 mt-4">
+                Once we receive and inspect your returned item, we’ll notify you
+                and issue a refund to your original payment method within
+                <strong>5–10 business days</strong>.
+              </p>
+            </div>
+            <div>
+              <img
+                class="h-[420px] w-full object-cover object-center rounded-2xl"
+                src="./Assets/contactus.webp"
+                alt="contact"
+              />
+            </div>
+          </div>
+        </section>
+      </section>
     </div>
+
+    <!-- faq section -->
+    <section class="overflow-x-hidden px-3 py-8">
+      <div class="w-full mx-auto text-center space-y-4 overflow-hidden">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="100"
+          class="text-indigo-600 text-sm font-medium"
+        >
+          FAQ's
+        </p>
+        <h1
+          data-aos="fade-up"
+          data-aos-delay="150"
+          class="text-2xl md:text-4xl font-semibold"
+        >
+          Looking for answer?
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="200"
+          class="text-sm md:text-lg text-gray-500"
+        >
+          Ship Beautiful Frontends Without the Overhead — Customizable, Scalable
+          and Developer-Friendly UI Components.
+        </p>
+      </div>
+
+      <div class="mx-auto grid lg:grid-cols-2 gap-8 py-10">
+        <div data-aos="zoom-in-right" data-aos-delay="150">
+          <img
+            class="w-full md:h-[420px] rounded-xl object-cover"
+            src="./assets/home2.webp"
+            alt="cad-img"
+          />
+        </div>
+        <div data-aos="zoom-in-left" data-aos-delay="300">
+          <!-- FAQ Items -->
+          <div id="faqContainer"></div>
+        </div>
+      </div>
+
+      <!-- faq Script  -->
+      <script>
+        const faqs = [
+          {
+            question: "Can I modify or cancel my order after placing it?",
+            answer:
+              "Orders can only be modified or canceled within 1 hour of placement. Please contact our customer service team immediately for assistance.",
+          },
+          {
+            question: "How long does delivery take?",
+            answer:
+              "Standard shipping typically takes 3–7 business days (domestic) and 7–14 business days (international). Express options are also available at checkout.",
+          },
+          {
+            question: "What is your return policy?",
+            answer:
+              "We accept returns within 14 days of delivery for unworn, unwashed items with original tags. Sale items may be final sale unless otherwise stated.",
+          },
+          {
+            question: "How early should we contact you before the event?",
+            answer:
+              "You can reach us by email at support@yourfashionbrand.com or through our live chat (Mon–Fri, 9 AM–6 PM EST).",
+          },
+          {
+            question: "Are your products ethically made?",
+            answer:
+              "Yes! We work with verified manufacturers that follow ethical labor practices and use sustainable materials whenever possible.",
+          },
+        ];
+
+        const container = document.getElementById("faqContainer");
+
+        faqs.forEach((faq, index) => {
+          const wrapper = document.createElement("div");
+          wrapper.className =
+            "border-b border-slate-200 py-3 md:py-6 cursor-pointer";
+
+          const header = document.createElement("div");
+          header.className = "flex items-center justify-between";
+          header.innerHTML = `
+            <h3 class="text-lg md:text-xl font-medium">${faq.question}</h3>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="transition-all duration-500 ease-in-out icon">
+                <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2"
+                    stroke="#1D293D" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        `;
+
+          const answer = document.createElement("p");
+          answer.className =
+            "text-sm md:text-lg text-slate-600 transition-all duration-500 ease-in-out opacity-0 max-h-0 -translate-y-2 pt-0 answer";
+          answer.textContent = faq.answer;
+
+          wrapper.appendChild(header);
+          wrapper.appendChild(answer);
+          container.appendChild(wrapper);
+
+          header.addEventListener("click", () => {
+            const allAnswers = document.querySelectorAll(".answer");
+            const allIcons = document.querySelectorAll(".icon");
+
+            allAnswers.forEach((el, i) => {
+              if (i === index) {
+                const isOpen = el.classList.contains("opacity-100");
+                el.classList.toggle("opacity-100", !isOpen);
+                el.classList.toggle("max-h-[300px]", !isOpen);
+                el.classList.toggle("translate-y-0", !isOpen);
+                el.classList.toggle("pt-4", !isOpen);
+                el.classList.toggle("opacity-0", isOpen);
+                el.classList.toggle("max-h-0", isOpen);
+                el.classList.toggle("-translate-y-2", isOpen);
+
+                allIcons[i].classList.toggle("rotate-180", !isOpen);
+              } else {
+                el.classList.remove(
+                  "opacity-100",
+                  "max-h-[300px]",
+                  "translate-y-0",
+                  "pt-4"
+                );
+                el.classList.add("opacity-0", "max-h-0", "-translate-y-2");
+                allIcons[i].classList.remove("rotate-180");
+              }
+            });
+          });
+        });
+      </script>
+    </section>
 
     <!-- Footer -->
     <footer class="relative p-3 overflow-x-hidden">
@@ -632,27 +725,19 @@
             </h3>
             <ul class="text-sm space-y-1">
               <li>
-                <a href="./info.html" class="hover:underline transition"
-                  >Delivery Information</a
+                <a href="./404.html" class="hover:underline transition">Home</a>
+              </li>
+              <li>
+                <a href="./404.html" class="hover:underline transition">Men</a>
+              </li>
+              <li>
+                <a href="./404.html" class="hover:underline transition"
+                  >Women</a
                 >
               </li>
               <li>
-                <a href="./info.html#return" class="hover:underline transition"
-                  >Return & Refund Policy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./info.html#customer"
-                  class="hover:underline transition"
-                  >Customer care</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./info.html#contactus"
-                  class="hover:underline transition"
-                  >Contact Us</a
+                <a href="./404.html" class="hover:underline transition"
+                  >Contact</a
                 >
               </li>
             </ul>
@@ -736,9 +821,6 @@
       </div>
     </footer>
 
-    <!-- Toast area -->
-    <div id="toast" class="fixed left-16 top-16 z-50"></div>
-
     <!-- Aos Animation  -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
@@ -757,20 +839,6 @@
     </script>
 
     <script>
-      function toast(msg) {
-        const t = document.createElement("div");
-        t.className = "mb-2 px-4 py-2 rounded bg-[#4d183f] text-white shadow";
-        t.textContent = msg;
-        document.getElementById("toast").appendChild(t);
-        setTimeout(() => {
-          t.remove();
-        }, 2500);
-      }
-      const get = document.getElementById("get");
-      get.addEventListener("click", () => {
-        toast("Coming soon...");
-      });
-
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
       const links = mobileMenu.querySelectorAll(".nav-link");

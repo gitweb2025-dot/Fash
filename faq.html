@@ -1,5 +1,5 @@
-    <!-- faq section -->
-    <section class="overflow-x-hidden px-3 py-8">
+<!-- faq section -->
+    <section class="overflow-x-hidden px-4 py-8">
       <div class="w-full mx-auto text-center space-y-4 overflow-hidden">
         <p
           data-aos="fade-up"
@@ -30,7 +30,7 @@
           <img
             class="w-full md:h-[500px] rounded-xl object-cover"
             src="../assets//contact.jpg"
-            alt="cad-img"
+            alt="card-img"
           />
         </div>
         <div data-aos="zoom-in-left" data-aos-delay="300">
@@ -131,261 +131,264 @@
       </script>
     </section>
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Infinite Scroll Promo Banner</title>
-<script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Policies | Your Shop Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Container -->
+    <div class="max-w-4xl mx-auto px-6 py-12 space-y-12">
+      <!-- Page Header -->
+      <header class="text-center mb-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Customer Information
+        </h1>
+        <p class="text-gray-600 mt-2">
+          Learn about our delivery, return policy, and how to contact us.
+        </p>
+      </header>
 
-<style>
-  .scroll-container {
-    overflow: hidden;
-    white-space: nowrap;
-  }
+      <!-- Delivery Information -->
+      <section class="bg-white shadow-md rounded-lg p-8">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+          Delivery Information
+        </h2>
+        <p class="mb-4">
+          We aim to process and dispatch all orders within
+          <strong>1–2 business days</strong> of purchase. Delivery times may
+          vary depending on your location and chosen shipping method.
+        </p>
+        <ul class="list-disc list-inside space-y-1 mb-4">
+          <li><strong>Standard Delivery:</strong> 3–7 business days</li>
+          <li><strong>Express Delivery:</strong> 1–3 business days</li>
+          <li><strong>International Shipping:</strong> 7–14 business days</li>
+        </ul>
+        <p class="text-gray-700">
+          Once your order is shipped, you’ll receive a confirmation email with
+          tracking details. Please ensure that your shipping address is correct
+          at checkout. We are not responsible for lost packages due to incorrect
+          addresses.
+        </p>
+      </section>
 
-  .scroll-content {
-    display: inline-block;
-    animation: scroll-left 18s linear infinite;
-  }
+      <!-- Return & Refund Policy -->
+      <section class="bg-white shadow-md rounded-lg p-8">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+          Return & Refund Policy
+        </h2>
+        <p class="mb-4">
+          We want you to love your purchase! If you’re not completely satisfied,
+          you can return or exchange items within <strong>7–14 days</strong> of
+          receiving your order.
+        </p>
 
-  /* Pause on hover */
-  .scroll-container:hover .scroll-content {
-    animation-play-state: paused;
-  }
-
-  @keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-</style>
-</head>
-
-<body class="bg-gray-100 flex justify-center py-10">
-
-
-
-</body>
-</html>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop Dashboard</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Top Navbar -->
-  <header class="w-full bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-      <h1 class="text-2xl font-bold">Store Dashboard</h1>
-
-      <!-- Mobile Menu Button -->
-      <button id="menuToggle" class="lg:hidden block p-2 bg-gray-100 rounded-xl">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-      </button>
-
-      <div id="navbarMenu" class="flex-col gap-4 lg:flex lg:flex-row lg:items-center hidden">
-        <input type="text" placeholder="Search products..." class="border rounded-xl px-4 py-2 w-full sm:w-64 outline-none focus:ring focus:ring-indigo-300" />
-        <button class="relative p-2 bg-gray-100 rounded-full">
-          <span class="material-icons">notifications</span>
-        </button>
-        <img src="https://i.pravatar.cc/40" class="w-10 h-10 rounded-full object-cover" />
-      </div>
-    </div>
-  </header>
-
-  <script>
-    const menuBtn = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navbarMenu');
-
-    menuBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('hidden');
-      navMenu.classList.toggle('flex');
-    });
-  </script>
-
-  <!-- Content -->
-  <main class="max-w-7xl mx-auto px-4 py-6 space-y-6">
-    <!-- Stats -->
-    <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
-        <h3 class="text-sm text-gray-500">Total Sales</h3>
-        <p class="text-2xl font-bold mt-1">$12,540</p>
-      </div>
-      <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
-        <h3 class="text-sm text-gray-500">Orders</h3>
-        <p class="text-2xl font-bold mt-1">420</p>
-      </div>
-      <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
-        <h3 class="text-sm text-gray-500">Visitors</h3>
-        <p class="text-2xl font-bold mt-1">8,120</p>
-      </div>
-      <div class="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
-        <h3 class="text-sm text-gray-500">Stock Items</h3>
-        <p class="text-2xl font-bold mt-1">312</p>
-      </div>
-    </section>
-
-    <!-- Tables & Cards -->
-    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <!-- Recent Orders -->
-      <div class="lg:col-span-2 bg-white rounded-2xl shadow p-4">
-        <h2 class="text-lg font-bold mb-4">Recent Orders</h2>
-        <div class="overflow-x-auto">
-          <table class="min-w-full text-sm">
-            <thead>
-              <tr class="border-b bg-gray-100">
-                <th class="py-3 px-4 text-left">Order ID</th>
-                <th class="py-3 px-4 text-left">Customer</th>
-                <th class="py-3 px-4 text-left">Amount</th>
-                <th class="py-3 px-4 text-left">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b">
-                <td class="py-3 px-4">#4521</td>
-                <td class="py-3 px-4">John Doe</td>
-                <td class="py-3 px-4">$120.00</td>
-                <td class="py-3 px-4 text-green-600 font-medium">Completed</td>
-              </tr>
-              <tr class="border-b">
-                <td class="py-3 px-4">#4520</td>
-                <td class="py-3 px-4">Emily Clark</td>
-                <td class="py-3 px-4">$89.50</td>
-                <td class="py-3 px-4 text-yellow-600 font-medium">Pending</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4">#4519</td>
-                <td class="py-3 px-4">Michael Lee</td>
-                <td class="py-3 px-4">$45.00</td>
-                <td class="py-3 px-4 text-red-600 font-medium">Cancelled</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Top Products -->
-      <div class="bg-white rounded-2xl shadow p-4">
-        <h2 class="text-lg font-bold mb-4">Top Products</h2>
-        <ul class="space-y-3">
-          <li class="flex items-center justify-between">
-            <span>Wireless Headphones</span>
-            <span class="font-bold">320 sold</span>
-          </li>
-          <li class="flex items-center justify-between">
-            <span>Smart Watch</span>
-            <span class="font-bold">210 sold</span>
-          </li>
-          <li class="flex items-center justify-between">
-            <span>Bluetooth Speaker</span>
-            <span class="font-bold">180 sold</span>
+        <h3 class="text-xl font-semibold mb-2">Eligibility for Returns</h3>
+        <ul class="list-disc list-inside space-y-1 mb-4">
+          <li>Items must be unused, unwashed, and in original packaging.</li>
+          <li>Proof of purchase (order number or receipt) is required.</li>
+          <li>
+            Certain items (e.g., sale items or customized products) may not be
+            eligible for return.
           </li>
         </ul>
-      </div>
-    </section>
-    <!-- Charts Section -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-      <div class="bg-white rounded-2xl shadow p-6">
-        <h2 class="text-lg font-bold mb-4">Sales Overview (Bar Chart)</h2>
-        <canvas id="salesBarChart" class="w-full max-h-64"></canvas>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-6">
-        <h2 class="text-lg font-bold mb-4">Product Share (Doughnut Chart)</h2>
-        <canvas id="productDoughnutChart" class="w-full max-h-64"></canvas>
-      </div>
-    </section>
 
-    <!-- User List Section -->
-    <section class="bg-white rounded-2xl shadow p-6 mt-6">
-      <h2 class="text-lg font-bold mb-4">Users List</h2>
-      <div class="overflow-x-auto">
-        <table class="min-w-full text-sm text-left">
-          <thead class="bg-gray-100">
-            <tr>
-              <th class="py-3 px-4">User</th>
-              <th class="py-3 px-4">Email</th>
-              <th class="py-3 px-4">Role</th>
-              <th class="py-3 px-4">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b">
-              <td class="py-3 px-4 flex items-center gap-2"><img src="https://i.pravatar.cc/32?u=1" class="rounded-full"> John Doe</td>
-              <td class="py-3 px-4">john@example.com</td>
-              <td class="py-3 px-4">Admin</td>
-              <td class="py-3 px-4 text-green-600 font-medium">Active</td>
-            </tr>
-            <tr class="border-b">
-              <td class="py-3 px-4 flex items-center gap-2"><img src="https://i.pravatar.cc/32?u=2" class="rounded-full"> Sarah Lee</td>
-              <td class="py-3 px-4">sarah@example.com</td>
-              <td class="py-3 px-4">Seller</td>
-              <td class="py-3 px-4 text-green-600 font-medium">Active</td>
-            </tr>
-            <tr>
-              <td class="py-3 px-4 flex items-center gap-2"><img src="https://i.pravatar.cc/32?u=3" class="rounded-full"> Mark Smith</td>
-              <td class="py-3 px-4">mark@example.com</td>
-              <td class="py-3 px-4">Customer</td>
-              <td class="py-3 px-4 text-yellow-600 font-medium">Pending</td>
-            </tr>
-          </tbody>
-        </table>
+        <h3 class="text-xl font-semibold mb-2">Refunds</h3>
+        <p class="mb-4">
+          Once we receive and inspect your returned item, we’ll notify you and
+          issue a refund to your original payment method within
+          <strong>5–10 business days</strong>.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-2">Exchanges</h3>
+        <p>
+          If you’d like a different size or color, please contact us before
+          returning your item so we can reserve the replacement.
+        </p>
+      </section>
+
+      <!-- Customer Care -->
+      <section class="bg-white shadow-md rounded-lg p-8">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">Customer Care</h2>
+        <p class="mb-4">
+          Our customer care team is here to help with any questions or issues
+          regarding your order, products, or account.
+        </p>
+        <ul class="space-y-2">
+          <li>
+            📧 <strong>Email:</strong>
+            <a
+              href="mailto:support@yourshopname.com"
+              class="text-blue-600 hover:underline"
+              >support@yourshopname.com</a
+            >
+          </li>
+          <li>📞 <strong>Phone/WhatsApp:</strong> +1 234 567 890</li>
+          <li>💬 <strong>Live Chat:</strong> Available Mon–Fri, 9 AM – 6 PM</li>
+        </ul>
+        <p class="mt-4 text-gray-700">
+          We strive to respond to all inquiries within
+          <strong>24 hours (business days)</strong>.
+        </p>
+      </section>
+
+      <!-- Contact Us -->
+      <section class="bg-white shadow-md rounded-lg p-8">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">Contact Us</h2>
+        <p class="mb-4">We’d love to hear from you!</p>
+        <ul class="space-y-2">
+          <li>
+            🏢 <strong>Address:</strong> 123 Market Street, Your City, Country
+          </li>
+          <li>
+            📧 <strong>Email:</strong>
+            <a
+              href="mailto:info@yourshopname.com"
+              class="text-blue-600 hover:underline"
+              >info@yourshopname.com</a
+            >
+          </li>
+          <li>📞 <strong>Phone:</strong> +1 234 567 890</li>
+          <li>
+            🌐 <strong>Website:</strong>
+            <a
+              href="https://www.yourshopname.com"
+              class="text-blue-600 hover:underline"
+              >www.yourshopname.com</a
+            >
+          </li>
+        </ul>
+        <p class="mt-4 text-gray-700">
+          For collaborations, wholesale inquiries, or press, please email:
+          <a
+            href="mailto:partnerships@yourshopname.com"
+            class="text-blue-600 hover:underline"
+            >partnerships@yourshopname.com</a
+          >
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store Info</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <header class="w-full bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3"
+      >
+        <h1 class="text-2xl font-bold">Store Info</h1>
+        <a href="index.html" class="text-indigo-600 font-medium hover:underline"
+          >Back to Dashboard</a
+        >
       </div>
-    </section>
+    </header>
 
-  </main>
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto px-4 py-10 space-y-8">
+      <!-- Delivery Information -->
+      <section class="bg-white p-6 rounded-2xl shadow">
+        <h2 class="text-2xl font-bold mb-3">Delivery Information</h2>
+        <p class="text-gray-600 leading-relaxed">
+          We offer fast and reliable delivery across all regions. Orders are
+          processed within 24 hours and usually delivered within 2-5 business
+          days depending on your location. Tracking information will be provided
+          via email after dispatch.
+        </p>
+      </section>
 
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    // Bar Chart
-    const barCtx = document.getElementById('salesBarChart').getContext('2d');
-    new Chart(barCtx, {
-      type: 'bar',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-        datasets: [{
-          label: 'Sales ($)',
-          data: [1200, 1900, 3000, 2500, 3200, 4000],
-          backgroundColor: 'rgba(99, 102, 241, 0.5)',
-          borderColor: 'rgba(99, 102, 241, 1)',
-          borderWidth: 2,
-          borderRadius: 6
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false
-      }
-    });
+      <!-- Return & Refund Policy -->
+      <section class="bg-white p-6 rounded-2xl shadow">
+        <h2 class="text-2xl font-bold mb-3">Return & Refund Policy</h2>
+        <p class="text-gray-600 leading-relaxed">
+          If you're not satisfied with your purchase, you may request a return
+          within 14 days of receiving your order. Refunds will be processed once
+          the returned item is inspected. Items must be unused and in original
+          packaging.
+        </p>
+      </section>
 
-    // Doughnut Chart
-    const doughnutCtx = document.getElementById('productDoughnutChart').getContext('2d');
-    new Chart(doughnutCtx, {
-      type: 'doughnut',
-      data: {
-        labels: ['Headphones', 'Watches', 'Speakers', 'Accessories'],
-        datasets: [{
-          data: [320, 210, 180, 120],
-          backgroundColor: [
-            'rgba(99, 102, 241, 0.8)',
-            'rgba(16, 185, 129, 0.8)',
-            'rgba(59, 130, 246, 0.8)',
-            'rgba(234, 179, 8, 0.8)'
-          ]
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false
-      }
-    });
-  </script>
-</body>
+      <!-- Customer Care -->
+      <section class="bg-white p-6 rounded-2xl shadow">
+        <h2 class="text-2xl font-bold mb-3">Customer Care</h2>
+        <p class="text-gray-600 leading-relaxed">
+          Our customer support team is available 24/7 to assist with your
+          concerns. We aim to provide fast and helpful support for all inquiries
+          regarding orders, products, and services.
+        </p>
+      </section>
+
+      <!-- Contact Us -->
+      <section class="bg-white p-6 rounded-2xl shadow">
+        <h2 class="text-2xl font-bold mb-3">Contact Us</h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          For any help or questions, contact us through the following channels:
+        </p>
+        <ul class="text-gray-700 space-y-2">
+          <li><strong>Email:</strong> support@store.com</li>
+          <li><strong>Phone:</strong> +1 (555) 456-7890</li>
+          <li><strong>Address:</strong> 123 Commerce St, Business City</li>
+        </ul>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="bg-white p-6 rounded-2xl shadow">
+        <h2 class="text-2xl font-bold mb-3">Frequently Asked Questions</h2>
+        <div class="space-y-4 text-gray-700">
+          <div>
+            <p class="font-semibold">How long does delivery take?</p>
+            <p>
+              Delivery usually takes 2-5 business days depending on your
+              location.
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold">Can I cancel my order?</p>
+            <p>Yes, orders can be cancelled before they are shipped.</p>
+          </div>
+          <div>
+            <p class="font-semibold">Do you ship internationally?</p>
+            <p>
+              Currently, we ship only within the country. International shipping
+              coming soon!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Warranty Policy -->
+      <section class="bg-white p-6 rounded-2xl shadow">
+        <h2 class="text-2xl font-bold mb-3">Warranty Policy</h2>
+        <p class="text-gray-600 leading-relaxed">
+          All products come with a 6-month warranty covering manufacturing
+          defects. Warranty does not cover physical or accidental damage.
+        </p>
+      </section>
+
+      <!-- Shipping Coverage -->
+      <section class="bg-white p-6 rounded-2xl shadow">
+        <h2 class="text-2xl font-bold mb-3">Shipping Coverage</h2>
+        <p class="text-gray-600 leading-relaxed mb-3">
+          We deliver to all major cities, towns, and rural regions. Delivery
+          availability varies based on local courier networks.
+        </p>
+        <ul class="list-disc ml-6 text-gray-700">
+          <li>Standard City Delivery: 2-3 days</li>
+          <li>Rural Delivery: 3-7 days</li>
+          <li>Express Delivery: Available in select cities</li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
