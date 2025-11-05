@@ -177,6 +177,32 @@
         }
       }
     </style>
+
+    <style>
+      .scroll-container {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .scroll-content {
+        display: inline-block;
+        animation: scroll-left 25s linear infinite;
+      }
+
+      /* Pause on hover */
+      .scroll-container:hover .scroll-content {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
   </head>
 
   <body class="antialiased bg-white text-black">
@@ -469,6 +495,70 @@
         });
       </script>
     </header>
+
+    <!-- Announcement Bar -->
+    <div class="p-3 overflow-hidden">
+      <div
+        class="scroll-container bg-[#ebd8bf] text-black py-2 w-full font-semibold"
+      >
+        <div class="scroll-content">
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-truck"></i> Free Shipping</span
+          >
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-explosion"></i> 50% Off Orders Above
+            ₹5000</span
+          >
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-repeat"></i> 10-Day Replacement
+            Guarantee</span
+          >
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-star"></i> Premium Quality Products</span
+          >
+          <span class="px-8 text-sm md:text-base">🛡 Secure Payments</span>
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-boxes-packing"></i> Cash on Delivery
+            Available</span
+          >
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-gift"></i> Free Gifts on Orders Above
+            ₹7000</span
+          >
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-fire"></i> Limited-Time Festive Sale!</span
+          >
+
+          <!-- Duplicate for perfect loop -->
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-truck"></i> Free Shipping</span
+          >
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-explosion"></i> 50% Off Orders Above
+            ₹5000</span
+          >
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-repeat"></i> 10-Day Replacement
+            Guarantee</span
+          >
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-star"></i> Premium Quality Products</span
+          >
+          <span class="px-8 text-sm md:text-base">🛡 Secure Payments</span>
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-boxes-packing"></i> Cash on Delivery
+            Available</span
+          >
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-gift"></i> Free Gifts on Orders Above
+            ₹7000</span
+          >
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-fire"></i> Limited-Time Festive Sale!</span
+          >
+        </div>
+      </div>
+    </div>
 
     <!-- Home -->
     <main class="relative p-3 overflow-x-hidden text-black">
