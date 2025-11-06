@@ -3,4 +3,6 @@
 @theme{
     --font-primary: "Cormorant Garamond", serif;
     --font-secondary: "Montserrat", sans-serif;
+    --breakpoint-xsm: 340px;
+    --breakpoint-xsmd: 440px;
 }

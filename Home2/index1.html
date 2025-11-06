@@ -44,6 +44,12 @@
     <!-- Tailwind CSS  -->
     <link rel="stylesheet" href="../output.css" />
 
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -143,55 +149,63 @@
     </style>
 
     <style>
-      /* Small polished tweaks */
-      .card-hover {
-        transition: transform 0.18s ease, box-shadow 0.18s ease;
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #000000 !important; /* Tailwind’s blue-900 */
       }
 
-      .card-hover:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        color: #2563eb !important; /* Tailwind’s blue-600 */
       }
 
-      /* .no-scroll {
-        overflow: hidden;
-      } */
-
-      .glass {
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.7),
-          rgba(255, 255, 255, 0.6)
-        );
+      /* Optional: background circle style */
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        font-size: 20px;
+        background-color: white;
+        border-radius: 9999px;
+        padding: 10px 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
 
-      .thumb-active {
-        outline: 2px solid rgba(99, 102, 241, 0.9);
-      }
-    </style>
-
-    <style>
-      .scroll-container {
-        overflow: hidden;
-        white-space: nowrap;
+      .swiper-pagination {
+        color: #000000;
       }
 
-      .scroll-content {
-        display: inline-block;
-        animation: scroll-left 25s linear infinite;
+      .swiper {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 420px;
+        z-index: 1;
       }
 
-      /* Pause on hover */
-      .scroll-container:hover .scroll-content {
-        animation-play-state: paused;
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      @keyframes scroll-left {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @media screen and (max-width: 512px) {
+        .swiper-button-next,
+        .swiper-button-prev {
+          display: none;
         }
       }
     </style>
@@ -234,8 +248,8 @@
     >
       <div class="flex items-center justify-between p-3">
         <!-- Logo -->
-        <a class="" href="./index.html">
-          <img class="h-8" src="./Assets/logo1.png" alt="logo" />
+        <a class="" href="../index.html">
+          <img class="h-8" src="../Assets/logo1.png" alt="logo" />
         </a>
 
         <!-- Desktop Nav -->
@@ -248,7 +262,7 @@
             <button
               class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
             >
-              <a href="./index.html">Home</a>
+              <a href="./index1.html">Home</a>
               <i id="homeToggle" class="fa-solid fa-caret-down"></i>
             </button>
 
@@ -268,10 +282,10 @@
 
               <li>
                 <a
-                  href="./404.html"
+                  href="../index.html"
                   class="block px-4 py-2 text-black hover:bg-gray-50 hover:text-gray-800 tr"
                 >
-                  Home 2
+                  Home 1
                 </a>
               </li>
             </ul>
@@ -279,7 +293,7 @@
 
           <!-- Men -->
           <a
-            href="./men.html"
+            href="./404.html"
             class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Men
@@ -287,21 +301,21 @@
 
           <!-- Women -->
           <a
-            href="./women.html"
+            href="./404.html"
             class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Women
           </a>
           <!-- Contact -->
           <a
-            href="./contact.html"
+            href="./404.html"
             class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Contact
           </a>
           <!-- Dashboard -->
           <a
-            href="./dashboard.html"
+            href="./404.html"
             class="relative inline-block text-black after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[#4d183f] after:transition-all after:duration-300 hover:after:w-full"
           >
             Dashboard
@@ -337,7 +351,7 @@
             </button> -->
             <a
               class="md:flex items-center gap-2 rounded-3xl text-sm transform hover:scale-95 transition duration-200 ease-out hidden"
-              href="./signin.html"
+              href="../signin.html"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -378,7 +392,7 @@
             <button
               class="flex items-center gap-1 w-full text-left hover:text-gray-800 transition-colors lg:hidden"
             >
-              <a href="./index.html">Home</a>
+              <a href="./index1.html">Home</a>
               <i id="mobileToggle" class="fa-solid fa-caret-down"></i>
             </button>
 
@@ -409,7 +423,7 @@
           <!-- Men -->
           <li>
             <a
-              href="./men.html"
+              href="./404.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Men</a
             >
@@ -417,7 +431,7 @@
           <!-- Women -->
           <li>
             <a
-              href="./women.html"
+              href="./404.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Women</a
             >
@@ -425,7 +439,7 @@
           <!-- Contact -->
           <li>
             <a
-              href="./contact.html"
+              href="./404.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Contact</a
             >
@@ -433,7 +447,7 @@
           <!-- Dashboard -->
           <li>
             <a
-              href="./dashboard.html"
+              href="./404.html"
               class="nav-link block hover:text-gray-800 transition-colors"
               >Dashboard</a
             >
@@ -448,7 +462,7 @@
           </li> -->
           <li>
             <a
-              href="./signin.html"
+              href="../signin.html"
               class="flex items-center gap-2 nav-link hover:text-gray-800 transition-colors"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -496,87 +510,519 @@
       </script>
     </header>
 
-    <!-- Announcement Bar -->
-    <div class="p-3 overflow-hidden">
-      <div
-        class="scroll-container bg-[#4c183f] text-white py-2 w-full font-semibold"
-      >
-        <div class="scroll-content">
-          <span class="px-8 text-sm md:text-base"><i class="fa-solid fa-truck"></i> Free Shipping</span>
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-explosion"></i> 50% Off Orders Above ₹5000</span
-          >
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-repeat"></i> 10-Day Replacement Guarantee</span
-          >
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-star"></i> Premium Quality Products</span
-          >
-          <span class="px-8 text-sm md:text-base"><i class="fa-solid fa-shield-halved"></i> Secure Payments</span>
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-boxes-packing"></i> Cash on Delivery Available</span
-          >
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-gift"></i> Free Gifts on Orders Above ₹7000</span
-          >
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-fire"></i> Limited-Time Festive Sale!</span
-          >
-
-          <!-- Duplicate for perfect loop -->
-          <span class="px-8 text-sm md:text-base"><i class="fa-solid fa-truck"></i> Free Shipping</span>
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-explosion"></i> 50% Off Orders Above ₹5000</span
-          >
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-repeat"></i> 10-Day Replacement Guarantee</span
-          >
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-star"></i> Premium Quality Products</span
-          >
-          <span class="px-8 text-sm md:text-base"><i class="fa-solid fa-shield-halved"></i> Secure Payments</span>
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-boxes-packing"></i> Cash on Delivery Available</span
-          >
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-gift"></i> Free Gifts on Orders Above ₹7000</span
-          >
-          <span class="px-8 text-sm md:text-base"
-            ><i class="fa-solid fa-fire"></i> Limited-Time Festive Sale!</span
+    <section class="p-3 overflow-hidden">
+      <div class="relative">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- img1 -->
+            <div class="swiper-slide">
+              <img
+                class="h-[400px] w-full object-cover object-[20%_20%]"
+                src="../Assets/ind-home1.webp"
+                alt=""
+              />
+            </div>
+            <!-- img2 -->
+            <div class="swiper-slide">
+              <img
+                class="h-[400px] w-full object-cover object-[20%_20%]"
+                src="../Assets/ind-home3.webp"
+                alt=""
+              />
+            </div>
+            <!-- img3 -->
+            <div class="swiper-slide">
+              <img
+                class="h-[400px] w-full object-cover object-[20%_20%]"
+                src="../Assets/ind-home4.webp"
+                alt=""
+              />
+            </div>
+            <!-- img4 -->
+            <div class="swiper-slide">
+              <img
+                class="h-[400px] w-full object-cover object-center"
+                src="../Assets/ind-home6.webp"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div
+          class="md:pl-20 h-[420px] w-full flex flex-col items-start justify-center max-w-lg px-3 space-y-4 py-4"
+        >
+          <p class="z-30">Casual & Everyday</p>
+          <h1 class="text-2xl md:text-5xl font-primary font-bold z-30">
+            Effortlessly blend comfort & style!
+          </h1>
+          <p class="text-sm md:text-lg z-30">
+            Effortlessly blend comfort and style with our Casual & Everyday
+            collection, featuring cozy sweaters, versatile denim, laid-back
+            tees, and relaxed-fit joggers for your everyday adventures
+          </p>
+          <a
+            class="px-6 py-3 border border-black/50 transform hover:scale-95 transition duration-300 ease-in-out z-30"
+            href="#productsGrid"
+            >View Collections</a
           >
         </div>
       </div>
-    </div>
 
-    <!-- Home -->
-    <main class="relative p-3 overflow-x-hidden text-white">
-      <div class="absolute p-3 inset-0 z-[-1]">
-        <img
-          class="w-full h-[500px] object-cover object-[20%_20%] brightness-50"
-          src="./Assets/home5.webp"
-          alt="bg-image"
-        />
-      </div>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-      <div
-        class="h-[500px] w-full flex flex-col items-start justify-end max-w-lg px-3 space-y-4 py-4"
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          speed: 1400,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+    </section>
+
+    <section id="productsGrid" class="p-3 py-8 overflow-hidden scroll-mt-20">
+      <h1 class="text-3xl md:text-5xl font-semibold text-center mx-auto">
+        Our Latest Collections
+      </h1>
+      <p
+        class="text-sm md:text-lg text-slate-500 text-center mt-2 max-w-2xl mx-auto"
       >
-        <p>Casual & Everyday</p>
-        <h1 class="text-2xl md:text-5xl font-primary font-bold">
-          Effortlessly blend comfort & style!
-        </h1>
-        <p class="text-sm md:text-lg">
-          Effortlessly blend comfort and style with our Casual & Everyday
-          collection, featuring cozy sweaters, versatile denim, laid-back tees,
-          and relaxed-fit joggers for your everyday adventures
-        </p>
-        <a
-          class="px-6 py-3 border border-white/50 transform hover:scale-95 transition duration-300 ease-in-out"
-          href="#productsGrid"
-          >View Collections</a
-        >
+        A visual collection of our most recent works - each piece crafted with
+        intention, emotion, and style.
+      </p>
+      <div
+        class="flex flex-wrap items-center justify-center mt-12 gap-4 mx-auto"
+      >
+        <div class="relative group rounded-lg overflow-hidden">
+          <img
+            src="../Assets/men-pro-1.jpg"
+            alt="image"
+            class="size-full xsm:size-56 object-cover object-top"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black/50 md:opacity-0 group-hover:opacity-100 transition-all duration-300"
+          >
+            <h1 class="text-xl font-medium">Men Kurtha</h1>
+            <a
+              href="./men.html"
+              class="flex items-center gap-1 text-sm text-white/70"
+            >
+              Show More
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.125 1.625H11.375V4.875"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.41602 7.58333L11.3743 1.625"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.75 7.04167V10.2917C9.75 10.579 9.63586 10.8545 9.4327 11.0577C9.22953 11.2609 8.95398 11.375 8.66667 11.375H2.70833C2.42102 11.375 2.14547 11.2609 1.9423 11.0577C1.73914 10.8545 1.625 10.579 1.625 10.2917V4.33333C1.625 4.04602 1.73914 3.77047 1.9423 3.5673C2.14547 3.36414 2.42102 3.25 2.70833 3.25H5.95833"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="relative group rounded-lg overflow-hidden">
+          <img
+            src="../Assets/pro-1.jpg"
+            alt="image"
+            class="size-full xsm:size-56 object-cover object-top"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black/50 md:opacity-0 group-hover:opacity-100 transition-all duration-300"
+          >
+            <h1 class="text-xl font-medium">Women Sarees</h1>
+            <a href="#" class="flex items-center gap-1 text-sm text-white/70">
+              Show More
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.125 1.625H11.375V4.875"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.41602 7.58333L11.3743 1.625"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.75 7.04167V10.2917C9.75 10.579 9.63586 10.8545 9.4327 11.0577C9.22953 11.2609 8.95398 11.375 8.66667 11.375H2.70833C2.42102 11.375 2.14547 11.2609 1.9423 11.0577C1.73914 10.8545 1.625 10.579 1.625 10.2917V4.33333C1.625 4.04602 1.73914 3.77047 1.9423 3.5673C2.14547 3.36414 2.42102 3.25 2.70833 3.25H5.95833"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="relative group rounded-lg overflow-hidden">
+          <img
+            src="../Assets/women-pro-4.jpg"
+            alt="image"
+            class="size-full xsm:size-56 object-cover object-top"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black/50 md:opacity-0 group-hover:opacity-100 transition-all duration-300"
+          >
+            <h1 class="text-xl font-medium">Women Watches</h1>
+            <a href="#" class="flex items-center gap-1 text-sm text-white/70">
+              Show More
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.125 1.625H11.375V4.875"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.41602 7.58333L11.3743 1.625"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.75 7.04167V10.2917C9.75 10.579 9.63586 10.8545 9.4327 11.0577C9.22953 11.2609 8.95398 11.375 8.66667 11.375H2.70833C2.42102 11.375 2.14547 11.2609 1.9423 11.0577C1.73914 10.8545 1.625 10.579 1.625 10.2917V4.33333C1.625 4.04602 1.73914 3.77047 1.9423 3.5673C2.14547 3.36414 2.42102 3.25 2.70833 3.25H5.95833"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="relative group rounded-lg overflow-hidden">
+          <img
+            src="../Assets/menp-pro-3.jpeg"
+            alt="image"
+            class="size-full xsm:size-56 object-cover object-top"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black/50 md:opacity-0 group-hover:opacity-100 transition-all duration-300"
+          >
+            <h1 class="text-xl font-medium">Men Shoes</h1>
+            <a
+              href="./men.html"
+              class="flex items-center gap-1 text-sm text-white/70"
+            >
+              Show More
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.125 1.625H11.375V4.875"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.41602 7.58333L11.3743 1.625"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.75 7.04167V10.2917C9.75 10.579 9.63586 10.8545 9.4327 11.0577C9.22953 11.2609 8.95398 11.375 8.66667 11.375H2.70833C2.42102 11.375 2.14547 11.2609 1.9423 11.0577C1.73914 10.8545 1.625 10.579 1.625 10.2917V4.33333C1.625 4.04602 1.73914 3.77047 1.9423 3.5673C2.14547 3.36414 2.42102 3.25 2.70833 3.25H5.95833"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="relative group rounded-lg overflow-hidden">
+          <img
+            src="../Assets/menp-pro-13.jpg"
+            alt="image"
+            class="size-full xsm:size-56 object-cover object-top"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black/50 md:opacity-0 group-hover:opacity-100 transition-all duration-300"
+          >
+            <h1 class="text-xl font-medium">Men Bags</h1>
+            <a
+              href="./men.html"
+              class="flex items-center gap-1 text-sm text-white/70"
+            >
+              Show More
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.125 1.625H11.375V4.875"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.41602 7.58333L11.3743 1.625"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.75 7.04167V10.2917C9.75 10.579 9.63586 10.8545 9.4327 11.0577C9.22953 11.2609 8.95398 11.375 8.66667 11.375H2.70833C2.42102 11.375 2.14547 11.2609 1.9423 11.0577C1.73914 10.8545 1.625 10.579 1.625 10.2917V4.33333C1.625 4.04602 1.73914 3.77047 1.9423 3.5673C2.14547 3.36414 2.42102 3.25 2.70833 3.25H5.95833"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="relative group rounded-lg overflow-hidden">
+          <img
+            src="../Assets/pro-10.jpg"
+            alt="image"
+            class="size-full xsm:size-56 object-cover object-top"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black/50 md:opacity-0 group-hover:opacity-100 transition-all duration-300"
+          >
+            <h1 class="text-xl font-medium">Half Saree</h1>
+            <a href="#" class="flex items-center gap-1 text-sm text-white/70">
+              Show More
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.125 1.625H11.375V4.875"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.41602 7.58333L11.3743 1.625"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.75 7.04167V10.2917C9.75 10.579 9.63586 10.8545 9.4327 11.0577C9.22953 11.2609 8.95398 11.375 8.66667 11.375H2.70833C2.42102 11.375 2.14547 11.2609 1.9423 11.0577C1.73914 10.8545 1.625 10.579 1.625 10.2917V4.33333C1.625 4.04602 1.73914 3.77047 1.9423 3.5673C2.14547 3.36414 2.42102 3.25 2.70833 3.25H5.95833"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="relative group rounded-lg overflow-hidden">
+          <img
+            src="../Assets/women-pro-12.webp"
+            alt="image"
+            class="size-full xsm:size-56 object-cover object-top"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black/50 md:opacity-0 group-hover:opacity-100 transition-all duration-300"
+          >
+            <h1 class="text-xl font-medium">Women Shoes</h1>
+            <a href="#" class="flex items-center gap-1 text-sm text-white/70">
+              Show More
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.125 1.625H11.375V4.875"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.41602 7.58333L11.3743 1.625"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.75 7.04167V10.2917C9.75 10.579 9.63586 10.8545 9.4327 11.0577C9.22953 11.2609 8.95398 11.375 8.66667 11.375H2.70833C2.42102 11.375 2.14547 11.2609 1.9423 11.0577C1.73914 10.8545 1.625 10.579 1.625 10.2917V4.33333C1.625 4.04602 1.73914 3.77047 1.9423 3.5673C2.14547 3.36414 2.42102 3.25 2.70833 3.25H5.95833"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="relative group rounded-lg overflow-hidden">
+          <img
+            src="../Assets/pro-8.jpg"
+            alt="image"
+            class="size-full xsm:size-56 object-cover object-top"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black/50 md:opacity-0 group-hover:opacity-100 transition-all duration-300"
+          >
+            <h1 class="text-xl font-medium">Lehenga</h1>
+            <a href="#" class="flex items-center gap-1 text-sm text-white/70">
+              Show More
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.125 1.625H11.375V4.875"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.41602 7.58333L11.3743 1.625"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.75 7.04167V10.2917C9.75 10.579 9.63586 10.8545 9.4327 11.0577C9.22953 11.2609 8.95398 11.375 8.66667 11.375H2.70833C2.42102 11.375 2.14547 11.2609 1.9423 11.0577C1.73914 10.8545 1.625 10.579 1.625 10.2917V4.33333C1.625 4.04602 1.73914 3.77047 1.9423 3.5673C2.14547 3.36414 2.42102 3.25 2.70833 3.25H5.95833"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="relative group rounded-lg overflow-hidden">
+          <img
+            src="../Assets/menp-pro-12.jpg"
+            alt="image"
+            class="size-full xsm:size-56 object-cover object-top"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 text-white bg-black/50 md:opacity-0 group-hover:opacity-100 transition-all duration-300"
+          >
+            <h1 class="text-xl font-medium">Men's suits</h1>
+            <a
+              href="./men.html"
+              class="flex items-center gap-1 text-sm text-white/70"
+            >
+              Show More
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.125 1.625H11.375V4.875"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.41602 7.58333L11.3743 1.625"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.75 7.04167V10.2917C9.75 10.579 9.63586 10.8545 9.4327 11.0577C9.22953 11.2609 8.95398 11.375 8.66667 11.375H2.70833C2.42102 11.375 2.14547 11.2609 1.9423 11.0577C1.73914 10.8545 1.625 10.579 1.625 10.2917V4.33333C1.625 4.04602 1.73914 3.77047 1.9423 3.5673C2.14547 3.36414 2.42102 3.25 2.70833 3.25H5.95833"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
-    </main>
+    </section>
+
+    <!-- Cashback -->
+    <section class="relative p-3 overflow-x-hidden">
+      <div class="grid grid-cols-1 sm:grid-cols-2 border border-black p-2">
+        <!-- image -->
+        <div
+          class="flex flex-wrap gap-4 items-center justify-center w-full md:border-r-2 py-3"
+        >
+          <img
+            class="h-10 max-sm:h-14 md:h-20"
+            src="../Assets/idfc.png"
+            alt="idfc"
+          />
+          <img
+            class="h-8 max-sm:h-12 md:h-18"
+            src="../Assets/hdfc.png"
+            alt="hdfc"
+          />
+        </div>
+        <!-- 7.5 % -->
+        <div
+          class="flex flex-col items-center justify-center gap-2 border-t-2 md:border-t-0 py-3"
+        >
+          <h1 class="text-3xl md:text-4xl text-center font-bold">
+            Flat 7.5% Cashback
+          </h1>
+          <p>UPTO ₹ 4000 per Quarter</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Mobile App -->
     <section class="relative p-3 overflow-x-hidden">
@@ -635,7 +1081,7 @@
         class="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-gray-500"
       >
         <div>
-          <img class="h-8" src="./Assets/logo1.png" alt="dummyLogoColored" />
+          <img class="h-8" src="../Assets/logo1.png" alt="dummyLogoColored" />
           <p class="mt-6 max-w-2xl">
             If you would like to experience the best of online shopping for men,
             women and kids in India, you are at the right place. Stackly is the
@@ -651,20 +1097,20 @@
             </h3>
             <ul class="text-sm space-y-1">
               <li>
-                <a href="./index.html" class="hover:underline transition"
+                <a href="./index1.html" class="hover:underline transition"
                   >Home</a
                 >
               </li>
               <li>
-                <a href="./men.html" class="hover:underline transition">Men</a>
+                <a href="../404.html" class="hover:underline transition">Men</a>
               </li>
               <li>
-                <a href="./women.html" class="hover:underline transition"
+                <a href="../404.html" class="hover:underline transition"
                   >Women</a
                 >
               </li>
               <li>
-                <a href="./404.html" class="hover:underline transition"
+                <a href="../404.html" class="hover:underline transition"
                   >Contact</a
                 >
               </li>
@@ -676,25 +1122,25 @@
             </h3>
             <ul class="text-sm space-y-1">
               <li>
-                <a href="./info.html" class="hover:underline transition"
+                <a href="../info.html" class="hover:underline transition"
                   >Delivery Information</a
                 >
               </li>
               <li>
-                <a href="./info.html#return" class="hover:underline transition"
+                <a href="../info.html#return" class="hover:underline transition"
                   >Return & Refund Policy</a
                 >
               </li>
               <li>
                 <a
-                  href="./info.html#customer"
+                  href="../info.html#customer"
                   class="hover:underline transition"
                   >Customer care</a
                 >
               </li>
               <li>
                 <a
-                  href="./info.html#contactus"
+                  href="../info.html#contactus"
                   class="hover:underline transition"
                   >Contact Us</a
                 >
@@ -749,7 +1195,8 @@
       </div>
     </footer>
 
-
+    <!-- Toast area -->
+    <div id="toast" class="fixed right-16 top-20 z-50"></div>
 
     <!-- Aos Animation  -->
     <script
@@ -769,6 +1216,22 @@
     </script>
 
     <script>
+      function toast(msg) {
+        const t = document.createElement("div");
+        t.className = "mb-2 px-4 py-2 rounded bg-green-500 text-white shadow";
+        t.textContent = msg;
+        document.getElementById("toast").appendChild(t);
+        setTimeout(() => {
+          t.remove();
+        }, 2500);
+      }
+
+      document.querySelectorAll("#getApp").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          toast("Launching soon...");
+        });
+      });
+
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
       const links = mobileMenu.querySelectorAll(".nav-link");
@@ -791,7 +1254,6 @@
           homeMenu.classList.add("hidden");
         }
       });
-
     </script>
   </body>
 </html>
