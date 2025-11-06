@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WomenCheckout — Fashion Store</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm p-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a class="" href="./index1.html">
+        <img class="h-8" src="../Assets/logo1.png" alt="logo" />
+      </a>
+      <a href="./women.html#main" class="text-sm text-[#4c183f] hover:underline"
+        >← Continue Shopping</a
+      >
+    </header>
+
+    <!-- Main -->
+    <main class="mx-auto p-3 py-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Cart Items -->
+      <section class="lg:col-span-2 bg-white shadow rounded-xl p-6">
+        <h2 class="text-lg font-semibold mb-4">Your Cart</h2>
+        <div id="checkoutItems" class="divide-y divide-gray-200"></div>
+      </section>
+
+      <!-- Summary -->
+      <aside class="bg-white shadow rounded-xl p-6 h-fit">
+        <h2 class="text-lg font-semibold mb-4">Order Summary</h2>
+        <div id="orderSummary" class="space-y-3 text-sm text-gray-700"></div>
+        <hr class="my-4" />
+        <button
+          id="payBtn"
+          class="cursor-pointer w-full py-3 rounded-lg bg-[#4c183f] text-white font-semibold hover:bg-[#4c183f] transition"
+        >
+          Proceed to Payment
+        </button>
+      </aside>
+    </main>
+
+    <script>
+      /* ---------- Checkout Script ---------- */
+      const CART_KEY = "fs_demo_cart_v3";
+      const cart = JSON.parse(localStorage.getItem(CART_KEY) || "{}");
+
+      const products = [
+        { id: "p1", title: "Denim Watch — Classic", price: 1799 },
+        { id: "p2", title: "Classic Bag", price: 2599 },
+        { id: "p3", title: "Metro Shoe", price: 1499 },
+        { id: "p4", title: "Everyday Sneakers", price: 3299 },
+        { id: "p5", title: "Floral Shirt", price: 2199 },
+        { id: "p6", title: "Wrist Overcoat", price: 6999 },
+        { id: "p7", title: "Casual Peach", price: 799 },
+        { id: "p8", title: "Steel Crossbody", price: 3899 },
+        { id: "p9", title: "Brown", price: 899 },
+        { id: "p10", title: "Blue Mystery", price: 1599 },
+        { id: "p11", title: "Tuxedo", price: 2599 },
+        { id: "p12", title: "Bomber", price: 1999 },
+        { id: "p13", title: "Varsity", price: 2999 },
+        { id: "p14", title: "Lounge Suit", price: 6899 },
+        { id: "p15", title: "Cotton Suit", price: 999 },
+        { id: "p16", title: "Button-Down", price: 2699 },
+        { id: "p17", title: "Cargo", price: 4899 },
+        { id: "p18", title: "Bermuda", price: 899 },
+        { id: "p19", title: "Polo fit", price: 1799 },
+        { id: "p20", title: "Crossbody", price: 2899 },
+      ];
+
+      const checkoutItems = document.getElementById("checkoutItems");
+      const orderSummary = document.getElementById("orderSummary");
+      const payBtn = document.getElementById("payBtn");
+
+      function renderCheckout() {
+        const items = Object.values(cart);
+        if (items.length === 0) {
+          checkoutItems.innerHTML = `
+          <p class="text-gray-500 text-center py-10">
+            Your cart is empty.<br>
+            <a href="./men.html" class="text-indigo-600 underline">Go back to shop</a>
+          </p>`;
+          orderSummary.innerHTML = "";
+          payBtn.disabled = true;
+          payBtn.classList.add("opacity-50", "cursor-not-allowed");
+          return;
+        }
+
+        let subtotal = 0;
+        checkoutItems.innerHTML = items
+          .map((ci) => {
+            const p = products.find((x) => x.id === ci.id);
+            const lineTotal = p.price * ci.qty;
+            subtotal += lineTotal;
+            return `
+          <div class="flex justify-between items-center py-4">
+            <div>
+              <p class="font-medium">${p.title}</p>
+              <p class="text-sm text-gray-500">Qty: ${ci.qty} | Size: ${
+              ci.size || "M"
+            }</p>
+            </div>
+            <span class="font-semibold">₹${lineTotal}</span>
+          </div>`;
+          })
+          .join("");
+
+        const shipping = subtotal > 3000 ? 0 : 149;
+        const total = subtotal + shipping;
+
+        orderSummary.innerHTML = `
+        <div class="flex justify-between"><span>Subtotal</span><span>₹${subtotal}</span></div>
+        <div class="flex justify-between"><span>Shipping</span><span>${
+          shipping === 0 ? "Free" : "₹" + shipping
+        }</span></div>
+        <div class="flex justify-between font-semibold text-lg mt-2">
+          <span>Total</span><span>₹${total}</span>
+        </div>`;
+      }
+
+      renderCheckout();
+
+      payBtn.addEventListener("click", () => {
+        alert("✅ This is a Sample Payment successful!");
+        localStorage.removeItem(CART_KEY);
+        window.location.href = "./404.html";
+      });
+    </script>
+  </body>
+</html>

@@ -164,7 +164,7 @@
 
               <li>
                 <a
-                  href="./404.html"
+                  href="./Home2/index1.html"
                   class="block px-4 py-2 text-black hover:bg-gray-50 hover:text-gray-800 tr"
                 >
                   Home 2
@@ -267,7 +267,7 @@
             >
               <li>
                 <a
-                  href="./404.html"
+                  href="./Home2/index1.html"
                   class="block px-2 py-2 hover:bg-gray-50 hover:text-gray-800"
                 >
                   Home 2
@@ -308,7 +308,7 @@
               >Contact</a
             >
           </li>
-          
+
           <!-- Faq -->
           <li>
             <a
@@ -540,7 +540,7 @@
           <div
             class="backdrop-blur-md bg-white shadow-lg rounded-2xl text-black border border-black/5"
           >
-            <form
+            <form id="form"
               data-aos="zoom-in-right"
               data-aos-delay="100"
               method="get"
@@ -767,6 +767,15 @@
     </script>
 
     <script>
+      // form
+      document
+        .getElementById("form")
+        .addEventListener("submit", function (event) {
+          // event.preventDefault();
+          event.target.reset();
+          // Continue with your form submission logic
+        });
+
       function toast(msg) {
         const t = document.createElement("div");
         t.className = "mb-2 px-4 py-2 rounded bg-[#4d183f] text-white shadow";
