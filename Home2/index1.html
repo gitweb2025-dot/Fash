@@ -42,8 +42,7 @@
     />
 
     <!-- Tailwind CSS  -->
-    <link rel="stylesheet" href="./output.css" />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="../output.css" />
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
@@ -200,7 +199,7 @@
 
   <body class="antialiased bg-white text-black">
     <!-- Cart drawer -->
-    <aside
+    <!-- <aside
       id="cartDrawer"
       class="fixed right-0 top-0 h-screen w-full sm:w-96 z-50 transform translate-x-full transition-transform duration-700 ease-out bg-white shadow-2xl"
     >
@@ -227,7 +226,7 @@
           Checkout
         </button>
       </div>
-    </aside>
+    </aside> -->
 
     <!-- Navbar  -->
     <header
@@ -311,7 +310,7 @@
         <!-- login & cart -->
         <div class="flex text-sm gap-4 font-medium">
           <div class="relative flex">
-            <button
+            <!-- <button
               id="cartToggle"
               class="relative inline-flex items-center p-3 rounded-lg hover:bg-gray-50 cursor-pointer"
             >
@@ -335,7 +334,7 @@
                 class="absolute top-0 right-0 bg-[#4c183f] text-white text-xs rounded-full px-1.5 py-0.5"
                 >0</span
               >
-            </button>
+            </button> -->
             <a
               class="md:flex items-center gap-2 rounded-3xl text-sm transform hover:scale-95 transition duration-200 ease-out hidden"
               href="./signin.html"
@@ -549,25 +548,6 @@
       </div>
     </div>
 
-    <!-- Announcement Bar -->
-    <!-- <div class="p-3 overflow-hidden">
-      <div
-        class="w-full py-2.5 px-3 font-medium text-sm text-white bg-[#4c183f]"
-      >
-        <div
-          class="mx-auto flex flex-col sm:flex-row justify-center items-start sm:items-center gap-4"
-        >
-          <p>
-            <i class="fa-solid fa-truck"></i> Free Shipping on Orders Above $50
-          </p>
-          <span class="hidden sm:inline">|</span>
-          <p><i class="fa-solid fa-gift"></i> 20% OFF on First Purchase</p>
-           <span class="hidden sm:inline">|</span>
-          <p><i class="fa-solid fa-lock"></i> Use Code: <strong class="uppercase">welcome10</strong></p>
-        </div>
-      </div>
-    </div> -->
-
     <!-- Home -->
     <main class="relative p-3 overflow-x-hidden text-white">
       <div class="absolute p-3 inset-0 z-[-1]">
@@ -596,49 +576,6 @@
           >View Collections</a
         >
       </div>
-    </main>
-
-    <!-- Main -->
-    <main class="mx-auto p-3 overflow-hidden">
-      <section class="mb-6">
-        <div class="flex flex-wrap gap-6 items-center justify-between">
-          <h1 class="text-2xl font-bold">Trending in Fashion</h1>
-        </div>
-        <div
-          class="mt-6 ml-auto w-full flex flex-wrap gap-6 items-center justify-between"
-        >
-          <div class="flex items-center gap-4">
-            <div class="block">
-              <input
-                id="search"
-                type="search"
-                placeholder="Search items, e.g. 'denim jacket'"
-                class="w-72 px-3 py-2 rounded-lg border border-[#4d183f] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4c183f]"
-              />
-            </div>
-          </div>
-
-          <div
-            class="flex items-center gap-2 text-sm text-gray-800 py-3 px-2 rounded-lg ring focus:ring-[#4c183f]"
-          >
-            <h1 class="font-bold">Sort by -</h1>
-            <select id="sort" class="cursor-pointer focus:outline-none">
-              <option value="featured">Featured</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-              <option value="rating">Top Rated</option>
-            </select>
-          </div>
-        </div>
-      </section>
-
-      <!-- Products grid -->
-      <section
-        id="productsGrid"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 scroll-mt-20"
-      >
-        <!-- Cards rendered by JS -->
-      </section>
     </main>
 
     <!-- Mobile App -->
@@ -812,591 +749,7 @@
       </div>
     </footer>
 
-    <!-- Product Modal (hidden) -->
-    <div id="productModal" class="hidden">
-      <div
-        class="min-h-screen fixed inset-0 z-50 flex items-center justify-center px-4"
-      >
-        <div class="absolute inset-0 bg-black/50" data-close></div>
-        <div
-          class="relative max-w-4xl w-full bg-white rounded-2xl shadow-2xl overflow-hidden"
-        >
-          <button
-            data-close
-            class="text-red-700 hover:text-red-900 absolute top-5 right-5 font-bold size-6 rounded-full bg-white/20 cursor-pointer"
-          >
-            ✕
-          </button>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-            <div class="flex flex-col gap-3">
-              <div
-                id="modalGallery"
-                class="h-52 md:h-80 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center"
-              >
-                <!-- main image -->
-                <img
-                  id="modalMainImg"
-                  class="w-full h-full object-cover object-top"
-                  src=""
-                  alt="product image"
-                />
-              </div>
-              <!-- <div id="modalThumbs" class="flex gap-2 overflow-x-auto"></div> -->
-            </div>
 
-            <div class="p-6">
-              <div class="flex items-start justify-between">
-                <div>
-                  <h2 id="modalTitle" class="text-xl font-semibold"></h2>
-                  <div id="modalBadge" class="mt-2 text-sm text-gray-500"></div>
-                </div>
-              </div>
-
-              <p id="modalDesc" class="mt-4 text-gray-600"></p>
-
-              <div class="mt-4 flex items-center gap-4">
-                <div class="text-2xl font-bold" id="modalPrice"></div>
-                <div
-                  class="text-sm text-gray-500 line-through"
-                  id="modalOldPrice"
-                ></div>
-                <div
-                  class="ml-auto flex items-center gap-2 text-sm text-gray-500"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 text-yellow-400"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.45a1 1 0 00-.364 1.118l1.286 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.45a1 1 0 00-1.176 0l-3.37 2.45c-.784.57-1.84-.197-1.54-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.063 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.05 2.927z"
-                    />
-                  </svg>
-                  <span id="modalRating">4.6</span>
-                </div>
-              </div>
-
-              <div class="mt-6 flex items-center gap-3">
-                <label class="text-sm">Size</label>
-                <select
-                  id="modalSize"
-                  class="px-2 py-1 rounded border border-[#4d183f]"
-                >
-                  <option>XS</option>
-                  <option>S</option>
-                  <option selected>M</option>
-                  <option>L</option>
-                  <option>XL</option>
-                </select>
-
-                <label class="ml-4 text-sm">Qty</label>
-                <input
-                  id="modalQty"
-                  type="number"
-                  min="1"
-                  value="1"
-                  class="w-20 px-2 py-1 rounded border border-[#4d183f]"
-                />
-              </div>
-
-              <div class="mt-6 flex gap-3">
-                <button
-                  id="addToCartBtn"
-                  class="flex-1 py-3 rounded-lg bg-[#4c183f] text-white font-semibold cursor-pointer"
-                >
-                  Add to cart
-                </button>
-                <!-- <button
-                  id="buyNowBtn"
-                  class="py-3 px-4 rounded-lg border border-[#4d183f]"
-                >
-                  Buy now
-                </button> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Toast area -->
-    <div id="toast" class="fixed right-16 top-20 z-50"></div>
-
-    <script>
-      /* ---------- Sample product data ---------- */
-      const products = [
-        {
-          id: "p1",
-          title: "Ribbed Knit Sweater",
-          price: 1799,
-          oldPrice: 2499,
-          rating: 4.7,
-          desc: "Soft ribbed knit sweater — cozy fit, great for city styling.",
-          images: ["./Assets/pro-1.jpg"],
-        },
-        {
-          id: "p2",
-          title: "Denim Jacket — Classic",
-          price: 2599,
-          oldPrice: 3499,
-          rating: 4.5,
-          desc: "Timeless denim jacket with reinforced stitching and brushed finish.",
-          images: ["./Assets/pro-2.jpg"],
-        },
-        {
-          id: "p3",
-          title: "Tailored Chinos",
-          price: 1499,
-          oldPrice: 1799,
-          rating: 4.4,
-          desc: "Slim-fit chinos — breathable, stretch fabric, perfect for smart-casual.",
-          images: ["./Assets/pro-3.jpg"],
-        },
-        {
-          id: "p12",
-          title: "Bomber Jacket",
-          price: 1999,
-          oldPrice: 9999,
-          rating: 4.0,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-2.jpg"],
-        },
-        {
-          id: "p4",
-          title: "Everyday Sneakers",
-          price: 3299,
-          oldPrice: null,
-          rating: 4.8,
-          desc: "Minimalist sneakers with cushioned insole and traction outsole.",
-          images: ["./Assets/pro-4.jpg"],
-        },
-        {
-          id: "p5",
-          title: "Floral Midi Dress",
-          price: 2199,
-          oldPrice: 2799,
-          rating: 4.6,
-          desc: "Flowy midi dress with delicate floral print and side pockets.",
-          images: ["./Assets/pro-5.jpg"],
-        },
-        {
-          id: "p16",
-          title: "Button-Down Shirt",
-          price: 2699,
-          oldPrice: 4999,
-          rating: 4.8,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-6.jpg"],
-        },
-        {
-          id: "p6",
-          title: "Wool Overcoat",
-          price: 6999,
-          oldPrice: 8999,
-          rating: 4.9,
-          desc: "Structured wool overcoat — refined silhouette and warm lining.",
-          images: ["./Assets/pro-6.jpg"],
-        },
-        {
-          id: "p7",
-          title: "Casual Tee Pack (2)",
-          price: 799,
-          oldPrice: 1299,
-          rating: 4.3,
-          desc: "Soft cotton tees — great as basics and layering pieces.",
-          images: ["./Assets/pro-7.jpg"],
-        },
-        {
-          id: "p8",
-          title: "Leather Crossbody Bag",
-          price: 3899,
-          oldPrice: 4999,
-          rating: 4.5,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-8.jpg"],
-        },
-        {
-          id: "p9",
-          title: "Peach Salwaar",
-          price: 899,
-          oldPrice: 2999,
-          rating: 4.5,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-9.jpg"],
-        },
-        {
-          id: "p10",
-          title: "Cotton Saree",
-          price: 1899,
-          oldPrice: 3999,
-          rating: 4.3,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/pro-10.jpg"],
-        },
-        {
-          id: "p11",
-          title: "Tuxedo",
-          price: 1599,
-          oldPrice: 2999,
-          rating: 4.2,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-1.jpg"],
-        },
-
-        {
-          id: "p13",
-          title: "Varsity Jacket",
-          price: 2999,
-          oldPrice: 7599,
-          rating: 4.4,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-3.jpg"],
-        },
-        {
-          id: "p14",
-          title: "Lounge Suit",
-          price: 6899,
-          oldPrice: 9999,
-          rating: 4.9,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-4.jpg"],
-        },
-        {
-          id: "p15",
-          title: "Cotton Suit",
-          price: 999,
-          oldPrice: 7899,
-          rating: 4.1,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-5.jpg"],
-        },
-
-        {
-          id: "p17",
-          title: "Cargo Shorts",
-          price: 4899,
-          oldPrice: 6799,
-          rating: 4.3,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-7.jpg"],
-        },
-        {
-          id: "p18",
-          title: "Bermuda Shorts",
-          price: 899,
-          oldPrice: 1999,
-          rating: 4.2,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-8.jpg"],
-        },
-        {
-          id: "p19",
-          title: "Polo shirt",
-          price: 1799,
-          oldPrice: 6099,
-          rating: 4.1,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-9.jpg"],
-        },
-        {
-          id: "p20",
-          title: "Crossbody Shirt",
-          price: 2899,
-          oldPrice: 9999,
-          rating: 4.6,
-          desc: "Compact crossbody bag with adjustable strap and multiple compartments.",
-          images: ["./Assets/men-pro-10.avif"],
-        },
-      ];
-
-      /* ---------- Cart state (persisted) ---------- */
-      const CART_KEY = "fs_demo_cart_v1";
-      let cart = JSON.parse(localStorage.getItem(CART_KEY) || "{}");
-
-      /* ---------- Utilities ---------- */
-      const q = (s) => document.querySelector(s);
-      const qa = (s) => document.querySelectorAll(s);
-
-      function toast(msg) {
-        const t = document.createElement("div");
-        t.className = "mb-2 px-4 py-2 rounded bg-green-500 text-white shadow";
-        t.textContent = msg;
-        document.getElementById("toast").appendChild(t);
-        setTimeout(() => {
-          t.remove();
-        }, 2500);
-      }
-
-      /* ---------- Rendering products ---------- */
-      function renderProducts(list = products) {
-        const container = q("#productsGrid");
-        container.innerHTML = "";
-        list.forEach((p) => {
-          const el = document.createElement("article");
-          el.className =
-            "bg-white rounded-2xl p-4 card-hover transition-transform transform border border-black/10";
-          el.innerHTML = `
-          <div class="aspect-[4/3] rounded-lg overflow-hidden mb-3 bg-gray-100">
-            <img src="${p.images[0]}" alt="${
-            p.title
-          }" class="w-full h-full object-cover img-cover object-top" />
-          </div>
-          <div class="flex flex-col gap-2">
-            <h3 class="text-sm font-semibold">${p.title}</h3>
-            <div class="flex items-center gap-2">
-              <div class="font-bold">₹${p.price}</div>
-              ${
-                p.oldPrice
-                  ? `<div class="text-xs text-gray-400 line-through">₹${p.oldPrice}</div>`
-                  : ""
-              }
-              <div class="ml-auto flex items-center gap-1 text-sm text-gray-600">⭐ ${
-                p.rating
-              }</div>
-            </div>
-            <p class="text-xs text-gray-500 line-clamp-2">${p.desc}</p>
-            <div class="mt-3 flex gap-2">
-              <button data-id="${
-                p.id
-              }" class="viewBtn flex-1 py-2 rounded-lg border border-[#4d183f] cursor-pointer">View</button>
-              <button data-id="${
-                p.id
-              }" class="addBtn bg-[#4c183f] text-white px-3 py-2 rounded-lg cursor-pointer">Add Cart</button>
-            </div>
-          </div>
-        `;
-          container.appendChild(el);
-        });
-
-        // attach listeners
-        qa(".viewBtn").forEach((b) =>
-          b.addEventListener("click", (e) =>
-            openProductModal(e.currentTarget.dataset.id)
-          )
-        );
-        qa(".addBtn").forEach((b) =>
-          b.addEventListener("click", (e) => {
-            addToCart(e.currentTarget.dataset.id, 1);
-          })
-        );
-      }
-
-      /* ---------- Product modal logic ---------- */
-      function openProductModal(id) {
-        const p = products.find((x) => x.id === id);
-        if (!p) return;
-        q("#modalMainImg").src = p.images[0];
-        q("#modalTitle").textContent = p.title;
-        q("#modalDesc").textContent = p.desc;
-        q("#modalPrice").textContent = "₹" + p.price;
-        q("#modalOldPrice").textContent = p.oldPrice ? "₹" + p.oldPrice : "";
-        q("#modalRating").textContent = p.rating;
-        q("#modalQty").value = 1;
-
-        // const thumbs = q("#modalThumbs");
-        // thumbs.innerHTML = "";
-        // p.images.forEach((src) => {
-        //   const t = document.createElement("img");
-        //   t.src = src;
-        //   t.className =
-        //     "w-20 h-20 rounded-lg object-cover cursor-pointer border";
-        //   t.addEventListener("click", () => {
-        //     q("#modalMainImg").src = src;
-        //   });
-        //   thumbs.appendChild(t);
-        // });
-
-        // add to cart handler
-        const addBtn = q("#addToCartBtn");
-        addBtn.onclick = () => {
-          const qty = parseInt(q("#modalQty").value || "1");
-          addToCart(p.id, qty, q("#modalSize").value);
-          closeModal();
-        };
-
-        // show modal
-        q("#productModal").classList.remove("hidden");
-        document.documentElement.classList.add("no-scroll");
-      }
-
-      function closeModal() {
-        q("#productModal").classList.add("hidden");
-        document.documentElement.classList.remove("no-scroll");
-      }
-
-      // modal close triggers
-      document.addEventListener("click", (e) => {
-        if (e.target.matches("[data-close]")) closeModal();
-      });
-
-      /* ---------- Cart logic ---------- */
-      function saveCart() {
-        localStorage.setItem(CART_KEY, JSON.stringify(cart));
-      }
-
-      function addToCart(id, qty = 1, size = "M") {
-        if (!cart[id]) cart[id] = { id, qty: 0, size };
-        cart[id].qty += qty;
-        cart[id].size = size;
-        saveCart();
-        renderCart();
-        toast("Added to cart");
-      }
-
-      function updateQty(id, newQty) {
-        if (!cart[id]) return;
-        if (newQty <= 0) delete cart[id];
-        else cart[id].qty = newQty;
-        saveCart();
-        renderCart();
-      }
-
-      function removeFromCart(id) {
-        delete cart[id];
-        saveCart();
-        renderCart();
-      }
-
-      function cartItemsDetailed() {
-        const detailed = [];
-        for (const ci of Object.values(cart)) {
-          const p = products.find((x) => x.id === ci.id);
-          if (p) detailed.push({ ...ci, product: p });
-          else delete cart[ci.id]; // remove invalid
-        }
-        saveCart();
-        return detailed;
-      }
-
-      function cartSubtotal() {
-        return cartItemsDetailed().reduce(
-          (s, it) => s + it.product.price * it.qty,
-          0
-        );
-      }
-
-      function renderCart() {
-        const drawer = q("#cartDrawer");
-        const itemsContainer = q("#cartItems");
-        itemsContainer.innerHTML = "";
-        const items = cartItemsDetailed();
-        if (items.length === 0) {
-          itemsContainer.innerHTML =
-            '<div class="text-center text-gray-500 py-12">Your cart is empty</div>';
-        } else {
-          items.forEach((it) => {
-            const div = document.createElement("div");
-            div.className = "flex items-center gap-3";
-            div.innerHTML = `
-            <img src="${
-              it.product.images[0]
-            }" class="w-16 h-16 rounded-lg object-cover" />
-            <div class="flex-1">
-              <div class="text-sm font-semibold">${it.product.title}</div>
-              <div class="text-xs text-gray-500">Size: ${it.size}</div>
-              <div class="mt-1 flex items-center gap-2 text-sm">
-                <button data-id="${
-                  it.id
-                }" class="decBtn px-2 py-1 rounded border cursor-pointer">-</button>
-                <div class="px-2">${it.qty}</div>
-                <button data-id="${
-                  it.id
-                }" class="incBtn px-2 py-1 rounded border cursor-pointer">+</button>
-              </div>
-            </div>
-            <div class="text-sm font-semibold">₹${
-              it.product.price * it.qty
-            }</div>
-            <button data-id="${
-              it.id
-            }" class="ml-2 text-sm text-red-500 removeBtn cursor-pointer">Remove</button>
-          `;
-            itemsContainer.appendChild(div);
-          });
-        }
-        q("#cartSubtotal").textContent = "₹" + cartSubtotal();
-        q("#cartCount").textContent = Object.values(cart).reduce(
-          (s, c) => s + c.qty,
-          0
-        );
-
-        // listeners for inc/dec/remove
-        qa(".incBtn").forEach((b) =>
-          b.addEventListener("click", (e) => {
-            const id = e.currentTarget.dataset.id;
-            updateQty(id, cart[id].qty + 1);
-          })
-        );
-        qa(".decBtn").forEach((b) =>
-          b.addEventListener("click", (e) => {
-            const id = e.currentTarget.dataset.id;
-            updateQty(id, cart[id].qty - 1);
-          })
-        );
-        qa(".removeBtn").forEach((b) =>
-          b.addEventListener("click", (e) => {
-            const id = e.currentTarget.dataset.id;
-            removeFromCart(id);
-          })
-        );
-      }
-
-      /* ---------- Drawer toggle ---------- */
-      const cartToggle = q("#cartToggle");
-      const cartDrawer = q("#cartDrawer");
-      cartToggle.addEventListener("click", () => {
-        cartDrawer.classList.remove("translate-x-full");
-        renderCart();
-      });
-      q("#closeCart").addEventListener("click", () => {
-        cartDrawer.classList.add("translate-x-full");
-      });
-
-      /* ---------- Search & Sort ---------- */
-      q("#search").addEventListener("input", (e) => {
-        const term = e.target.value.toLowerCase();
-        const filtered = products.filter(
-          (p) =>
-            p.title.toLowerCase().includes(term) ||
-            p.desc.toLowerCase().includes(term)
-        );
-        renderProducts(filtered);
-      });
-
-      q("#sort").addEventListener("change", (e) => {
-        const val = e.target.value;
-        let sorted = [...products];
-        if (val === "price-asc") sorted.sort((a, b) => a.price - b.price);
-        if (val === "price-desc") sorted.sort((a, b) => b.price - a.price);
-        if (val === "rating") sorted.sort((a, b) => b.rating - a.rating);
-        renderProducts(sorted);
-      });
-
-      /* ---------- Checkout (demo) ---------- */
-      //   q("#checkoutBtn").addEventListener("click", () => {
-      //     if (Object.keys(cart).length === 0) {
-      //       toast("Cart is empty");
-      //       return;
-      //     }
-      //     toast("Checkout demo — implement payment integration.");
-      //   });
-
-      // modal close with Escape
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-          closeModal();
-          cartDrawer.style.transform = "translateX(100%)";
-        }
-      });
-
-      /* ---------- Init ---------- */
-      renderProducts();
-      renderCart();
-
-      // small responsive tweak: close modal/drawer on nav click
-      window.addEventListener("resize", () => {});
-    </script>
 
     <!-- Aos Animation  -->
     <script
@@ -1416,12 +769,6 @@
     </script>
 
     <script>
-      document.querySelectorAll("#getApp").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          toast("Launching soon...");
-        });
-      });
-
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
       const links = mobileMenu.querySelectorAll(".nav-link");
@@ -1445,27 +792,6 @@
         }
       });
 
-      /* ---------- Checkout (navigate to checkout page) ---------- */
-      const checkoutBtn = q("#checkoutBtn");
-
-      checkoutBtn.addEventListener("click", () => {
-        if (Object.keys(cart).length === 0) {
-          toast("Cart is empty");
-          return;
-        }
-
-        // Ensure the latest cart data is stored
-        saveCart();
-
-        // Small delay to ensure localStorage write completes before redirect
-        checkoutBtn.disabled = true;
-        checkoutBtn.classList.add("opacity-50", "cursor-not-allowed");
-        toast("Redirecting to checkout...");
-
-        setTimeout(() => {
-          window.location.href = "./checkout.html";
-        }, 500);
-      });
     </script>
   </body>
 </html>

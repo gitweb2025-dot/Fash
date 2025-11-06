@@ -499,7 +499,9 @@
           <span class="px-8 text-sm md:text-base"
             ><i class="fa-solid fa-star"></i> Premium Quality Products</span
           >
-          <span class="px-8 text-sm md:text-base"><i class="fa-solid fa-shield-halved"></i> Secure Payments</span>
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-shield-halved"></i> Secure Payments</span
+          >
           <span class="px-8 text-sm md:text-base"
             ><i class="fa-solid fa-boxes-packing"></i> Cash on Delivery
             Available</span
@@ -527,7 +529,9 @@
           <span class="px-8 text-sm md:text-base"
             ><i class="fa-solid fa-star"></i> Premium Quality Products</span
           >
-          <span class="px-8 text-sm md:text-base"><i class="fa-solid fa-shield-halved"></i> Secure Payments</span>
+          <span class="px-8 text-sm md:text-base"
+            ><i class="fa-solid fa-shield-halved"></i> Secure Payments</span
+          >
           <span class="px-8 text-sm md:text-base"
             ><i class="fa-solid fa-boxes-packing"></i> Cash on Delivery
             Available</span
@@ -1480,14 +1484,25 @@
       window.addEventListener("resize", () => {});
 
       /* ---------- Checkout (navigate to checkout page) ---------- */
-      q("#checkoutBtn").addEventListener("click", () => {
+      const checkoutBtn = q("#checkoutBtn");
+
+      checkoutBtn.addEventListener("click", () => {
         if (Object.keys(cart).length === 0) {
           toast("Cart is empty");
           return;
         }
-        // Save cart to localStorage and go to checkout page
+
+        // Ensure the latest cart data is stored
         saveCart();
-        window.location.href = "./mencheckout.html";
+
+        // Small delay to ensure localStorage write completes before redirect
+        checkoutBtn.disabled = true;
+        checkoutBtn.classList.add("opacity-50", "cursor-not-allowed");
+        toast("Redirecting to checkout...");
+
+        setTimeout(() => {
+          window.location.href = "./mencheckout.html";
+        }, 300);
       });
     </script>
 
@@ -1547,28 +1562,6 @@
         if (!homeToggle.contains(e.target) && !homeMenu.contains(e.target)) {
           homeMenu.classList.add("hidden");
         }
-      });
-
-      /* ---------- Checkout (navigate to checkout page) ---------- */
-      const checkoutBtn = q("#checkoutBtn");
-
-      checkoutBtn.addEventListener("click", () => {
-        if (Object.keys(cart).length === 0) {
-          toast("Cart is empty");
-          return;
-        }
-
-        // Ensure the latest cart data is stored
-        saveCart();
-
-        // Small delay to ensure localStorage write completes before redirect
-        checkoutBtn.disabled = true;
-        checkoutBtn.classList.add("opacity-50", "cursor-not-allowed");
-        toast("Redirecting to checkout...");
-
-        setTimeout(() => {
-          window.location.href = "./checkout.html";
-        }, 300);
       });
     </script>
   </body>
