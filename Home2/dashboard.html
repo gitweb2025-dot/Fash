@@ -181,7 +181,7 @@
       <div class="z-40 flex items-center justify-between p-3">
         <!-- Logo -->
         <a class="" href="./index1.html"
-          ><img class="h-8 object-cover" src="../Assets/logo1.png" alt="logo"
+          ><img class="h-8 object-cover" src="../Assets/logo1.webp" alt="logo"
         /></a>
 
         <!-- Desktop Nav -->
@@ -355,27 +355,27 @@
       <header
         class="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0"
       >
-        <h2 class="text-3xl font-bold text-gray-900">Dashboard</h2>
+        <h2 data-aos="zoom-in-right" data-aos-delay="50" class="text-3xl font-bold text-gray-900">Dashboard</h2>
       </header>
 
       <!-- Cards -->
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-hidden py-6">
+        <div data-aos="zoom-in-up" data-aos-delay="50" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
           <p class="text-gray-500">Total Sales</p>
           <h3 class="text-3xl font-bold text-gray-900 mt-2">$12,450</h3>
           <p class="text-green-600 text-sm mt-2">▲ 15% from last month</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div data-aos="zoom-in-up" data-aos-delay="100" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
           <p class="text-gray-500">Orders</p>
           <h3 class="text-3xl font-bold text-gray-900 mt-2">1,245</h3>
           <p class="text-green-600 text-sm mt-2">▲ 8% from last week</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div data-aos="zoom-in-up" data-aos-delay="150" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
           <p class="text-gray-500">Customers</p>
           <h3 class="text-3xl font-bold text-gray-900 mt-2">982</h3>
           <p class="text-red-500 text-sm mt-2">▼ 3% this month</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div data-aos="zoom-in-up" data-aos-delay="200" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
           <p class="text-gray-500">Products in Stock</p>
           <h3 class="text-3xl font-bold text-gray-900 mt-2">325</h3>
           <p class="text-green-600 text-sm mt-2">▲ 4% restocked</p>
@@ -383,20 +383,20 @@
       </section>
 
       <!-- Charts Section -->
-      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow">
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 overflow-hidden">
+        <div data-aos="zoom-in-right" data-aos-delay="100" class="bg-white p-6 rounded-xl shadow">
           <h4 class="text-lg font-semibold mb-4">Sales Overview</h4>
           <canvas class="max-h-[300px]" id="salesChart"></canvas>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow">
+        <div data-aos="zoom-in-left" data-aos-delay="150" class="bg-white p-6 rounded-xl shadow">
           <h4 class="text-lg font-semibold mb-4">Top Categories</h4>
           <canvas class="max-h-[300px]" id="categoryChart"></canvas>
         </div>
       </section>
 
-      <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 overflow-hidden">
         <!-- Recent Orders -->
-        <div class="lg:col-span-2 bg-white rounded-2xl shadow p-4">
+        <div data-aos="fade-up-right" data-aos-delay="50" class="lg:col-span-2 bg-white rounded-2xl shadow p-4">
           <h2 class="text-lg font-bold mb-4">Recent Orders</h2>
           <div class="overflow-x-auto">
             <table class="min-w-full text-sm border border-black/20">
@@ -435,7 +435,7 @@
         </div>
 
         <!-- Top Products -->
-        <div class="bg-white rounded-2xl shadow p-4">
+        <div data-aos="fade-up-left" data-aos-delay="100" class="bg-white rounded-2xl shadow p-4">
           <h2 class="text-lg font-bold mb-4">Top Products</h2>
           <ul class="space-y-3">
             <li class="flex items-center justify-between">
@@ -463,7 +463,7 @@
       </section>
 
       <!-- User List Section -->
-      <section class="bg-white rounded-2xl shadow-lg p-6 mt-6">
+      <section data-aos="fade-up" data-aos-delay="50" class="bg-white rounded-2xl shadow-lg p-6 mt-6">
         <h2 class="text-lg font-bold mb-4">Users List</h2>
         <div class="overflow-x-auto">
           <table class="min-w-full text-sm text-left border border-black/20">
