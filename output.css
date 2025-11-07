@@ -1182,6 +1182,9 @@
   .object-\[20\%_\] {
     object-position: 20% ;
   }
+  .object-\[20\] {
+    object-position: 20;
+  }
   .object-\[30\%_30\%\] {
     object-position: 30% 30%;
   }
@@ -1199,6 +1202,9 @@
   }
   .object-\[40\%_\] {
     object-position: 40% ;
+  }
+  .object-\[80\%_20\%\] {
+    object-position: 80% 20%;
   }
   .object-\[80\%_40\%\] {
     object-position: 80% 40%;
@@ -2183,6 +2189,11 @@
   .md\:object-center {
     @media (width >= 48rem) {
       object-position: center;
+    }
+  }
+  .md\:object-top {
+    @media (width >= 48rem) {
+      object-position: top;
     }
   }
   .md\:p-0 {
