@@ -1164,6 +1164,21 @@
   .object-\[30\%_\] {
     object-position: 30% ;
   }
+  .object-\[40\%\] {
+    object-position: 40%;
+  }
+  .object-\[40\%_40\%\] {
+    object-position: 40% 40%;
+  }
+  .object-\[40\%_40\] {
+    object-position: 40% 40;
+  }
+  .object-\[40\%_\] {
+    object-position: 40% ;
+  }
+  .object-\[80\%_40\%\] {
+    object-position: 80% 40%;
+  }
   .object-center {
     object-position: center;
   }
@@ -1887,6 +1902,16 @@
       display: block;
     }
   }
+  .sm\:flex {
+    @media (width >= 40rem) {
+      display: flex;
+    }
+  }
+  .sm\:hidden {
+    @media (width >= 40rem) {
+      display: none;
+    }
+  }
   .sm\:inline {
     @media (width >= 40rem) {
       display: inline;
@@ -2093,6 +2118,11 @@
       }
     }
   }
+  .md\:object-\[20\%_20\%\] {
+    @media (width >= 48rem) {
+      object-position: 20% 20%;
+    }
+  }
   .md\:object-\[40\%_40\%\] {
     @media (width >= 48rem) {
       object-position: 40% 40%;
@@ -2203,6 +2233,11 @@
   .md\:text-gray-600 {
     @media (width >= 48rem) {
       color: var(--color-gray-600);
+    }
+  }
+  .md\:text-white {
+    @media (width >= 48rem) {
+      color: var(--color-white);
     }
   }
   .md\:opacity-0 {
