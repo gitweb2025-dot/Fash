@@ -672,7 +672,7 @@
             <button
               id="getApp"
               aria-label="googlePlayBtn"
-              class="hover:scale-95 transition-all duration-200 ease-in"
+              class="hover:scale-95 transition-all duration-200 ease-in cursor-pointer"
               type="button"
             >
               <img
@@ -684,7 +684,7 @@
             <button
               id="getApp"
               aria-label="appleStoreBtn"
-              class="hover:scale-95 transition-all duration-200 ease-in"
+              class="hover:scale-95 transition-all duration-200 ease-in cursor-pointer"
               type="button"
             >
               <img
@@ -1461,7 +1461,7 @@
         renderProducts(filtered);
       });
 
-      document.querySelectorAll(".get").forEach((btn) => {
+      document.querySelectorAll("#getApp").forEach((btn) => {
         btn.addEventListener("click", () => {
           toast("Launching soon...");
         });
