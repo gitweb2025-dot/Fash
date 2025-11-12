@@ -1693,6 +1693,7 @@
         >
           <input
             required
+            id="emailInput"
             type="text"
             class="bg-transparent outline-none rounded-full px-4 h-full flex-1"
             placeholder="Enter your email address"
@@ -1704,6 +1705,27 @@
             Subscribe
           </button>
         </form>
+        <span id="errorMsg" class="error text-red-500 text-sm mt-1"></span>
+
+        <script>
+          const form = document.getElementById("form");
+          const emailInput = document.getElementById("emailInput");
+          const errorMsg = document.getElementById("errorMsg");
+
+          form.addEventListener("submit", function (event) {
+            const emailValue = emailInput.value.trim();
+
+            if (!emailValue.endsWith("@gmail.com")) {
+              event.preventDefault(); // stop form from submitting
+              errorMsg.textContent =
+                "Please enter an email ending with @gmail.com";
+            } else {
+              errorMsg.textContent = ""; // clear error
+              // alert("Email accepted!");
+              event.target.reset();
+            }
+          });
+        </script>
       </div>
     </section>
 
@@ -1854,15 +1876,6 @@
     </script>
 
     <script>
-      // form
-      document
-        .getElementById("form")
-        .addEventListener("submit", function (event) {
-          // event.preventDefault();
-          event.target.reset();
-          // Continue with your form submission logic
-        });
-
       function toast(msg) {
         const t = document.createElement("div");
         t.className = "mb-2 px-4 py-2 rounded bg-green-500 text-white shadow";

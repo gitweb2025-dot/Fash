@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
 
-        <!-- Font Awesome Cdn Link -->
+    <!-- Font Awesome Cdn Link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -22,7 +22,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
@@ -81,7 +80,7 @@
 
     <!-- Sign Up Card -->
     <div
-      class="w-full max-w-md rounded-3xl shadow-2xl fade-in relative z-10 bg-white/5 px-4 py-10 backdrop-blur-sm my-24 text-black"
+      class="text-white md:text-black w-full max-w-md rounded-3xl shadow-2xl fade-in relative z-10 bg-white/5 px-4 py-10 backdrop-blur-sm my-24"
     >
       <h1 class="text-2xl md:text-4xl font-bold text-center mb-2 uppercase">
         Sign up
@@ -91,44 +90,53 @@
       </p>
 
       <!-- Form -->
-      <form method="get" action="./404.html" class="space-y-6" id="signupForm">
+      <form
+        method="get"
+        action="./404.html"
+        class="space-y-6 text-white md:text-black"
+        id="signupForm"
+      >
         <div>
           <label class="block text-sm mb-1">Full Name</label>
           <input
             type="text"
             placeholder="John Doe"
             required
-            class="w-full px-4 py-3 rounded-xl bg-white/5 border border-black/10 transition focus:border-gray-500"
+            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white md:placeholder:text-black/50 border border-white/50 transition"
           />
         </div>
         <div>
           <label class="block text-sm mb-1">Email</label>
           <input
+            id="emailInput"
             type="email"
             placeholder="you@example.com"
             required
-            class="w-full px-4 py-3 rounded-xl bg-white/5 border border-black/10 transition focus:border-gray-500"
+            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white md:placeholder:text-black/50 border border-white/50 transition focus:border-gray-500"
           />
+          <span id="errorMsg" class="text-sm text-red-500"></span>
         </div>
         <div>
           <label class="block text-sm mb-1">Password</label>
           <input
             type="password"
             placeholder="••••••••"
-            id="password"
+            id="passwordInput"
             required
-            class="w-full px-4 py-3 rounded-xl bg-white/5 border border-black/10 transition focus:border-gray-500"
+            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white md:placeholder:text-black/50 border border-white/50 transition focus:border-gray-500"
           />
+          <span id="errorMsgPass" class="text-sm text-red-500"></span>
         </div>
-        <div>
+        <!-- <div>
           <label class="block text-sm mb-1">Confirm Password</label>
           <input
-            type="password"
+            type="passwordInput"
             placeholder="••••••••"
             required
-            class="w-full px-4 py-3 rounded-xl bg-white/5 border border-black/10 transition focus:border-gray-500"
+            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white md:placeholder:text-black/50 border border-white/50 transition focus:border-gray-500"
           />
-        </div>
+          <span id="errorMsg"></span>
+        </div> -->
 
         <div class="flex justify-between items-center text-sm">
           <label class="flex items-center gap-2 cursor-pointer">
@@ -139,10 +147,64 @@
 
         <button
           type="submit"
-          class="w-full py-3 bg-white/50 font-semibold rounded-xl transform hover:scale-95 transition duration-300 ease-out cursor-pointer shadow-md"
+          class="w-full py-3 bg-white/20 font-semibold rounded-xl transform hover:scale-95 transition duration-300 ease-out cursor-pointer shadow-md"
         >
           Sign Up
         </button>
+
+        <script>
+          const form = document.getElementById("signupForm");
+          const emailInput = document.getElementById("emailInput");
+          const passwordInput = document.getElementById("passwordInput");
+          const errorMsg = document.getElementById("errorMsg");
+          const errorMsgPass = document.getElementById("errorMsgPass");
+
+          form.addEventListener("submit", function (event) {
+            event.preventDefault(); // always prevent first — only submit if valid
+
+            const emailValue = emailInput.value.trim();
+            const password = passwordInput.value;
+
+            // Email check
+            const validEmail = emailValue.endsWith("@gmail.com");
+
+            // Password checks
+            const hasUpper = /[A-Z]/.test(password);
+            const hasLower = /[a-z]/.test(password);
+            const hasNumber = /[0-9]/.test(password);
+            const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+            const validPassword =
+              hasUpper && hasLower && hasNumber && hasSpecial;
+
+            // Validation logic
+            if (!validEmail) {
+              errorMsg.textContent =
+                "Please enter an email ending with @gmail.com";
+              return; // stop here
+            }
+
+            if (validEmail) {
+              errorMsg.textContent = "";
+            }
+
+            if (!validPassword) {
+              errorMsgPass.textContent =
+                "Enter with special character, number, uppercase, and lowercase (e.g. H,@,9,h)";
+              return; // stop here
+            }
+
+            if (validPassword) {
+              errorMsgPass.textContent = "";
+            }
+
+            // If both are valid
+            errorMsg.textContent = "";
+            errorMsgPass.textContent = "";
+            form.reset();
+
+            window.location.href = "./404.html";
+          });
+        </script>
       </form>
 
       <!-- Footer -->

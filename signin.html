@@ -106,24 +106,28 @@
       <p class="text-center mb-8 text-sm">Sign in to manage your events</p>
 
       <!-- Form -->
-      <form method="get" action="./404.html" class="space-y-6">
+      <form id="signInForm" method="get" action="./404.html" class="space-y-6">
         <div>
           <label class="block text-sm mb-1">Email</label>
           <input
+            id="emailInput"
             required
             type="email"
             placeholder="you@example.com"
             class="w-full px-4 py-3 rounded-xl border transition border-white"
           />
+          <span id="errorMsg" class="text-sm text-red-500"></span>
         </div>
         <div>
           <label class="block text-sm mb-1">Password</label>
           <input
+            id="passwordInput"
             required
             type="password"
             placeholder="••••••••"
             class="w-full px-4 py-3 rounded-xl border transition border-white"
           />
+          <span id="errorMsgPass" class="text-sm text-red-500"></span>
         </div>
 
         <div class="ml-auto w-full flex justify-between items-center text-sm">
@@ -152,5 +156,57 @@
         >
       </p>
     </div>
+
+    <script>
+      const form = document.getElementById("signInForm");
+      const emailInput = document.getElementById("emailInput");
+      const passwordInput = document.getElementById("passwordInput");
+      const errorMsg = document.getElementById("errorMsg");
+      const errorMsgPass = document.getElementById("errorMsgPass");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // always prevent first — only submit if valid
+
+        const emailValue = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        // Email check
+        const validEmail = emailValue.endsWith("@gmail.com");
+
+        // Password checks
+        const hasUpper = /[A-Z]/.test(password);
+        const hasLower = /[a-z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        const validPassword = hasUpper && hasLower && hasNumber && hasSpecial;
+
+        // Validation logic
+        if (!validEmail) {
+          errorMsg.textContent = "Please enter an email ending with @gmail.com";
+          return; // stop here
+        }
+
+        if (validEmail) {
+          errorMsg.textContent = "";
+        }
+
+        if (!validPassword) {
+          errorMsgPass.textContent =
+            "Enter with special character, number, uppercase, and lowercase (e.g. H,@,9,h)";
+          return; // stop here
+        }
+
+        if (validPassword) {
+          errorMsgPass.textContent = "";
+        }
+
+        // If both are valid
+        errorMsg.textContent = "";
+        errorMsgPass.textContent = "";
+        form.reset();
+
+        window.location.href = "./404.html";
+      });
+    </script>
   </body>
 </html>

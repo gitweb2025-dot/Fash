@@ -565,7 +565,7 @@
               data-aos="zoom-in-right"
               data-aos-delay="100"
               method="get"
-              action="../404.html"
+              action="./404.html"
               class="flex flex-col items-start text-sm px-4 py-10 w-full"
             >
               <p class="text-xl uppercase font-bold pb-10 text-left">
@@ -595,11 +595,13 @@
                 <div class="w-full">
                   <label class="">Your Email</label>
                   <input
+                    id="emailInput"
                     placeholder="Enter your E-mail"
                     class="h-12 p-2 mt-2 w-full border border-gray-500/30 rounded outline-none focus:border-gray-300"
                     type="email"
                     required
                   />
+                  <span id="errorMsg" class="text-sm text-red-500"></span>
                 </div>
               </div>
 
@@ -619,6 +621,26 @@
                 Send Message
               </button>
             </form>
+
+            <script>
+              const form = document.getElementById("form");
+              const emailInput = document.getElementById("emailInput");
+              const errorMsg = document.getElementById("errorMsg");
+
+              form.addEventListener("submit", function (event) {
+                const emailValue = emailInput.value.trim();
+
+                if (!emailValue.endsWith("@gmail.com")) {
+                  event.preventDefault(); // stop form from submitting
+                  errorMsg.textContent =
+                    "Please enter an email ending with @gmail.com";
+                } else {
+                  errorMsg.textContent = ""; // clear error
+                  // alert("Email accepted!");
+                  event.target.reset();
+                }
+              });
+            </script>
           </div>
         </div>
       </section>
@@ -796,15 +818,6 @@
     </script>
 
     <script>
-      // form
-      document
-        .getElementById("form")
-        .addEventListener("submit", function (event) {
-          // event.preventDefault();
-          event.target.reset();
-          // Continue with your form submission logic
-        });
-
       function toast(msg) {
         const t = document.createElement("div");
         t.className = "mb-2 px-4 py-2 rounded bg-[#4d183f] text-white shadow";

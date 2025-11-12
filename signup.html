@@ -81,7 +81,7 @@
     class="flex items-center justify-end min-h-screen px-3 md:px-16 relative bg-amber-300"
   >
     <!-- Back Home -->
-    <div class="text-white absolute top-5 left-5 z-50">
+    <div class="text-white md:text-black absolute top-5 left-5 z-50">
       <a
         href="./index.html"
         class="flex items-center gap-1.5 transform hover:scale-95 transition duration-300 ease-out"
@@ -101,7 +101,7 @@
 
     <!-- Sign Up Card -->
     <div
-      class="w-full max-w-md rounded-3xl shadow-2xl fade-in relative z-10 bg-white/5 px-4 py-10 backdrop-blur-sm my-24 text-white"
+      class="text-white md:text-black w-full max-w-md rounded-3xl shadow-2xl fade-in relative z-10 bg-white/5 px-4 py-10 backdrop-blur-sm my-24"
     >
       <h1 class="text-2xl md:text-4xl font-bold text-center mb-2 uppercase">
         Sign up
@@ -111,44 +111,53 @@
       </p>
 
       <!-- Form -->
-      <form method="get" action="./404.html" class="space-y-6" id="signupForm">
+      <form
+        method="get"
+        action="./404.html"
+        class="space-y-6 text-white md:text-black"
+        id="signupForm"
+      >
         <div>
           <label class="block text-sm mb-1">Full Name</label>
           <input
             type="text"
             placeholder="John Doe"
             required
-            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white border border-white/50 transition"
+            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white md:placeholder:text-black/50 border border-white/50 transition"
           />
         </div>
         <div>
           <label class="block text-sm mb-1">Email</label>
           <input
+            id="emailInput"
             type="email"
             placeholder="you@example.com"
             required
-            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white border border-white/50 transition focus:border-gray-500"
+            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white md:placeholder:text-black/50 border border-white/50 transition focus:border-gray-500"
           />
+          <span id="errorMsg" class="text-sm text-red-500"></span>
         </div>
         <div>
           <label class="block text-sm mb-1">Password</label>
           <input
             type="password"
             placeholder="••••••••"
-            id="password"
+            id="passwordInput"
             required
-            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white border border-white/50 transition focus:border-gray-500"
+            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white md:placeholder:text-black/50 border border-white/50 transition focus:border-gray-500"
           />
+          <span id="errorMsgPass" class="text-sm text-red-500"></span>
         </div>
-        <div>
+        <!-- <div>
           <label class="block text-sm mb-1">Confirm Password</label>
           <input
-            type="password"
+            type="passwordInput"
             placeholder="••••••••"
             required
-            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white border border-white/50 transition focus:border-gray-500"
+            class="w-full px-4 py-3 rounded-xl bg-white/5 placeholder:text-white md:placeholder:text-black/50 border border-white/50 transition focus:border-gray-500"
           />
-        </div>
+          <span id="errorMsg"></span>
+        </div> -->
 
         <div class="flex justify-between items-center text-sm">
           <label class="flex items-center gap-2 cursor-pointer">
@@ -163,6 +172,60 @@
         >
           Sign Up
         </button>
+
+        <script>
+          const form = document.getElementById("signupForm");
+          const emailInput = document.getElementById("emailInput");
+          const passwordInput = document.getElementById("passwordInput");
+          const errorMsg = document.getElementById("errorMsg");
+          const errorMsgPass = document.getElementById("errorMsgPass");
+
+          form.addEventListener("submit", function (event) {
+            event.preventDefault(); // always prevent first — only submit if valid
+
+            const emailValue = emailInput.value.trim();
+            const password = passwordInput.value;
+
+            // Email check
+            const validEmail = emailValue.endsWith("@gmail.com");
+
+            // Password checks
+            const hasUpper = /[A-Z]/.test(password);
+            const hasLower = /[a-z]/.test(password);
+            const hasNumber = /[0-9]/.test(password);
+            const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+            const validPassword =
+              hasUpper && hasLower && hasNumber && hasSpecial;
+
+            // Validation logic
+            if (!validEmail) {
+              errorMsg.textContent =
+                "Please enter an email ending with @gmail.com";
+              return; // stop here
+            }
+
+            if (validEmail) {
+              errorMsg.textContent = "";
+            }
+
+            if (!validPassword) {
+              errorMsgPass.textContent =
+                "Enter with special character, number, uppercase, and lowercase (e.g. H,@,9,h)";
+              return; // stop here
+            }
+
+            if (validPassword) {
+              errorMsgPass.textContent = "";
+            }
+
+            // If both are valid
+            errorMsg.textContent = "";
+            errorMsgPass.textContent = "";
+            form.reset();
+
+             window.location.href = "./404.html";
+          });
+        </script>
       </form>
 
       <!-- Footer -->

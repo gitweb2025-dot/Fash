@@ -388,11 +388,11 @@
 
     <!-- Hero Section -->
     <main
-      class="relative flex items-center justify-center text-white md:text-black px-3"
+      class="relative flex items-center justify-center text-white md:text-black px-3 overflow-hidden"
     >
       <div class="absolute p-3 inset-0 z-[-1]">
         <img
-          class="w-full h-[300px] object-cover object-[30%_30%] brightness-50 md:brightness-100"
+          class="w-full h-[400px] object-cover object-[30%_30%] brightness-50 md:brightness-100"
           src="../Assets/ind-contact_50.webp"
           alt="bg-image"
         />
@@ -400,7 +400,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 md:gap-40">
         <div></div>
         <div
-          class="h-[300px] w-full flex flex-col items-start justify-center px-3 space-y-4 py-4"
+          class="h-[400px] w-full flex flex-col items-start justify-center px-3 space-y-4 py-4"
         >
           <p
             data-aos="zoom-in-up"
@@ -433,7 +433,7 @@
 
     <!-- Contact Section -->
     <section
-      class="py-16 px-3 grid grid-cols-1 md:grid-cols-2 gap-12 text-black"
+      class="py-16 px-3 grid grid-cols-1 md:grid-cols-2 gap-12 text-black overflow-hidden"
     >
       <!-- Contact Info -->
       <div>
@@ -564,11 +564,13 @@
             >Email Address</label
           >
           <input
+            id="emailInput"
             type="email"
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 outline-none"
             placeholder="you@example.com"
             required
           />
+          <span id="errorMsg" class="error text-red-500 text-sm mt-1"></span>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2"
@@ -588,6 +590,26 @@
           Send Message
         </button>
       </form>
+
+      <script>
+        const form = document.getElementById("form");
+        const emailInput = document.getElementById("emailInput");
+        const errorMsg = document.getElementById("errorMsg");
+
+        form.addEventListener("submit", function (event) {
+          const emailValue = emailInput.value.trim();
+
+          if (!emailValue.endsWith("@gmail.com")) {
+            event.preventDefault(); // stop form from submitting
+            errorMsg.textContent =
+              "Please enter an email ending with @gmail.com";
+          } else {
+            errorMsg.textContent = ""; // clear error
+            // alert("Email accepted!");
+            event.target.reset();
+          }
+        });
+      </script>
     </section>
 
     <!-- app -->
@@ -765,15 +787,6 @@
     </script>
 
     <script>
-      // form
-      document
-        .getElementById("form")
-        .addEventListener("submit", function (event) {
-          // event.preventDefault();
-          event.target.reset();
-          // Continue with your form submission logic
-        });
-
       function toast(msg) {
         const t = document.createElement("div");
         t.className = "mb-2 px-4 py-2 rounded bg-[#4d183f] text-white shadow";
