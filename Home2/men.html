@@ -575,6 +575,7 @@
                 placeholder="Search items, e.g. 'Denim Watch'"
                 class="w-72 px-3 py-2 rounded-lg border border-[#4d183f] shadow-sm focus:outline-none focus:ring focus:ring-[#4c183f]"
               />
+              <div id="products-container"></div>
             </div>
           </div>
 
@@ -1394,13 +1395,30 @@
 
       /* ---------- Search & Sort ---------- */
       q("#search").addEventListener("input", (e) => {
-        const term = e.target.value.toLowerCase();
+        const term = e.target.value.toLowerCase().trim();
+        const container = q("#productsGrid");
+
+        if (term === "") {
+          renderProducts(products);
+          return;
+        }
+
         const filtered = products.filter(
           (p) =>
             p.title.toLowerCase().includes(term) ||
             p.desc.toLowerCase().includes(term)
         );
-        renderProducts(filtered);
+
+        if (filtered.length > 0) {
+          renderProducts(filtered);
+        } else {
+          // Clear the grid and show only the message
+          container.innerHTML = `
+      <div class="text-center text-gray-500 py-8 text-lg w-full">
+        <p class="text-center">No products found.</p>
+      </div>
+    `;
+        }
       });
 
       q("#sort").addEventListener("change", (e) => {

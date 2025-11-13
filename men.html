@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fashion</title>
 
-
     <meta
       name="description"
       content="Discover the latest trends in men’s and women’s fashion at stackly. Shop stylish clothing, shoes, and accessories for every occasion. Free shipping & easy returns!"
@@ -612,9 +611,7 @@
     </main>
 
     <!-- Cashback -->
-    <section
-      class="relative p-3 overflow-x-hidden"
-    >
+    <section class="relative p-3 overflow-x-hidden">
       <div class="grid grid-cols-1 sm:grid-cols-2 border border-black p-2">
         <!-- image -->
         <div
@@ -660,6 +657,7 @@
                 placeholder="Search items, e.g. 'Denim Watch'"
                 class="w-72 px-3 py-2 rounded-lg border border-[#4d183f] shadow-sm focus:outline-none focus:ring focus:ring-[#4c183f]"
               />
+              <div id="products-container"></div>
             </div>
           </div>
 
@@ -1477,13 +1475,30 @@
 
       /* ---------- Search & Sort ---------- */
       q("#search").addEventListener("input", (e) => {
-        const term = e.target.value.toLowerCase();
+        const term = e.target.value.toLowerCase().trim();
+        const container = q("#productsGrid");
+
+        if (term === "") {
+          renderProducts(products);
+          return;
+        }
+
         const filtered = products.filter(
           (p) =>
             p.title.toLowerCase().includes(term) ||
             p.desc.toLowerCase().includes(term)
         );
-        renderProducts(filtered);
+
+        if (filtered.length > 0) {
+          renderProducts(filtered);
+        } else {
+          // Clear the grid and show only the message
+          container.innerHTML = `
+      <div class="text-center text-gray-500 py-8 text-lg w-full">
+        <p class="text-center">No products found.</p>
+      </div>
+    `;
+        }
       });
 
       q("#sort").addEventListener("change", (e) => {
