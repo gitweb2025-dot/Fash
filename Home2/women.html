@@ -1458,7 +1458,12 @@
         }
         // Save cart to localStorage and go to checkout page
         saveCart();
-        window.location.href = "./womencheckout.html";
+
+        toast("Redirecting to checkout...");
+
+        setTimeout(() => {
+          window.location.href = "./womencheckout.html";
+        }, 300);
       });
     </script>
 
