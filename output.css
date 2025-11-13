@@ -2030,6 +2030,11 @@
       padding: calc(var(--spacing) * 0);
     }
   }
+  .md\:p-3 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 3);
+    }
+  }
   .md\:p-6 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 6);
@@ -2048,6 +2053,11 @@
   .md\:p-16 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:p-63 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 63);
     }
   }
   .md\:px-16 {
