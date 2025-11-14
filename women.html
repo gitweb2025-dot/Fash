@@ -967,7 +967,7 @@
           </p>
 
           <div class="flex items-center gap-4 mt-6">
-            <button
+            <a href="./404.html"
               id="getApp"
               aria-label="googlePlayBtn"
               class="hover:scale-95 transition-all duration-200 ease-in"
@@ -978,8 +978,8 @@
                 src="./Assets/googlePlayBtn.webp"
                 alt="googlePlayBtn"
               />
-            </button>
-            <button
+            </a>
+            <a href="./404.html"
               id="getApp"
               aria-label="appleStoreBtn"
               class="hover:scale-95 transition-all duration-200 ease-in"
@@ -990,7 +990,7 @@
                 src="./Assets/appleStoreBtn.webp"
                 alt="appleStoreBtn"
               />
-            </button>
+            </a>
           </div>
         </div>
 
@@ -1076,27 +1076,27 @@
           </div>
           <div>
             <h3 class="font-semibold text-base text-gray-900 md:mb-5 mb-2">
-              Follow Us
+              Follow us on
             </h3>
-            <ul class="text-sm space-y-1">
+            <ul class=" space-y-1 flex items-center text-xl gap-2">
               <li>
-                <a href="./404.html" class="hover:underline transition"
-                  >Instagram</a
+                <a href="./404.html" class="hover:underline transition "
+                  ><i class="fa-brands fa-instagram"></i></a
                 >
               </li>
               <li>
                 <a href="./404.html" class="hover:underline transition"
-                  >Twitter</a
+                  ><i class="fa-brands fa-square-x-twitter"></i></a
                 >
               </li>
               <li>
                 <a href="./404.html" class="hover:underline transition"
-                  >Facebook</a
+                  ><i class="fa-brands fa-facebook"></i></a
                 >
               </li>
               <li>
                 <a href="./404.html" class="hover:underline transition"
-                  >YouTube</a
+                  ><i class="fa-brands fa-youtube"></i></a
                 >
               </li>
             </ul>
@@ -1779,11 +1779,11 @@
         renderProducts(filtered);
       });
 
-      document.querySelectorAll(".get").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          toast("Launching soon...");
-        });
-      });
+      // document.querySelectorAll(".get").forEach((btn) => {
+      //   btn.addEventListener("click", () => {
+      //     toast("Launching soon...");
+      //   });
+      // });
 
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
