@@ -53,7 +53,7 @@
 
     <!-- Tailwind CSS  -->
     <link rel="stylesheet" href="./output.css" />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
@@ -100,56 +100,6 @@
         /* enough for nav links */
         opacity: 1;
         transform: translateX(0);
-      }
-
-      .pop {
-        animation: popup 0.5s linear forwards;
-      }
-
-      @keyframes popup {
-        from {
-          transform: scale(0);
-          opacity: 0;
-        }
-
-        to {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-
-      .popout {
-        animation: popout 0.4s linear backwards;
-      }
-
-      @keyframes popout {
-        from {
-          transform: scale(1);
-          opacity: 1;
-        }
-
-        to {
-          transform: scale(0);
-          opacity: 0;
-        }
-      }
-
-      .marquee-inner {
-        display: flex;
-        width: fit-content;
-        animation: marqueeScroll linear infinite;
-        animation-duration: 20s;
-        /* Adjust based on number of cards */
-      }
-
-      @keyframes marqueeScroll {
-        0% {
-          transform: translateX(0%);
-        }
-
-        100% {
-          transform: translateX(-50%);
-        }
       }
     </style>
 
@@ -243,7 +193,7 @@
     <header
       class="sticky top-0 z-40 border-b border-slate-200 bg-white backdrop-blur w-full mx-auto"
     >
-      <div class="flex items-center justify-between p-3">
+      <div class="flex items-center justify-between p-3 md:px-6 lg:px-8">
         <!-- Logo -->
         <a class="" href="./index.html">
           <img class="h-8" src="./Assets/logo1.webp" alt="logo" />
@@ -523,7 +473,7 @@
     </header>
 
     <!-- Announcement Bar -->
-    <div class="p-3 overflow-hidden">
+    <div class="px-3 md:px-6 lg:px-8 py-3 overflow-hidden">
       <div
         class="scroll-container bg-[#4c183f] text-white py-2 w-full font-semibold"
       >
@@ -590,27 +540,8 @@
       </div>
     </div>
 
-    <!-- Announcement Bar -->
-    <!-- <div class="p-3 overflow-hidden">
-      <div
-        class="w-full py-2.5 px-3 font-medium text-sm text-white bg-[#4c183f]"
-      >
-        <div
-          class="mx-auto flex flex-col sm:flex-row justify-center items-start sm:items-center gap-4"
-        >
-          <p>
-            <i class="fa-solid fa-truck"></i> Free Shipping on Orders Above $50
-          </p>
-          <span class="hidden sm:inline">|</span>
-          <p><i class="fa-solid fa-gift"></i> 20% OFF on First Purchase</p>
-           <span class="hidden sm:inline">|</span>
-          <p><i class="fa-solid fa-lock"></i> Use Code: <strong class="uppercase">welcome10</strong></p>
-        </div>
-      </div>
-    </div> -->
-
     <!-- Home -->
-    <main class="relative p-3 overflow-hidden text-white">
+    <main class="relative px-3 md:mx-3 lg:mx-5 overflow-hidden text-white">
       <div class="absolute p-3 inset-0 z-[-1]">
         <img
           class="w-full h-[500px] object-cover object-[20%_20%] brightness-50"
@@ -648,7 +579,7 @@
     </main>
 
     <!-- Main -->
-    <main class="mx-auto p-3 overflow-hidden">
+    <main class="mx-auto p-3 md:p-6 lg:p-8 overflow-hidden">
       <section class="mb-6">
         <div class="flex flex-wrap gap-6 items-center justify-between">
           <h1 class="text-2xl font-bold">Trending in Fashion</h1>
@@ -692,7 +623,7 @@
     </main>
 
     <!-- Mobile App -->
-    <section class="relative p-3 overflow-x-hidden">
+    <section class="relative p-3 md:p-6 lg:p-8 overflow-x-hidden">
       <div
         class="overflow-hidden flex flex-col md:flex-row items-center justify-around text-sm border border-gray-300 rounded-md w-full bg-white"
       >
@@ -745,7 +676,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="relative p-3 overflow-hidden">
+    <footer class="relative p-3 md:p-6 lg:p-8 overflow-hidden">
       <div
         class="overflow-hidden flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-gray-500"
       >
@@ -845,7 +776,7 @@
           </div>
         </div>
       </div>
-      <div class="py-4 border-b border-gray-500/30 overflow-hidden">
+      <div class="py-4  overflow-hidden">
         <iframe
           class="w-full h-[300px] rounded-2xl"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1616097152896!2d78.1739798!3d11.682956599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1761905259614!5m2!1sen!2sin"
@@ -855,13 +786,13 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-
-      <div>
-        <p class="py-4 text-center text-sm md:text-base text-gray-500/80">
-          Copyright 2025 © stackly All Right Reserved.
-        </p>
-      </div>
     </footer>
+
+    <div>
+      <p class="py-4 text-center border-t border-gray-500/30 text-sm md:text-base text-gray-500/80">
+        Copyright 2025 © stackly All Right Reserved.
+      </p>
+    </div>
 
     <!-- Product Modal (hidden) -->
     <div id="productModal" class="hidden">
